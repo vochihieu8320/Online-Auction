@@ -7,7 +7,7 @@ import { LibrarienSidebar } from './librarien_sidebar';
 import { ImgIcon1,ImgIcon2,ImgIcon3,Clients_0,Clients_01,Clients_02,Clients_03,Clients_04,Clients_05,
   Clients_06,Clients_07,Clients_08,Clients_09,Clients_10,Clients_11 } from "../imagepath"
 
-class LibrarienDashboard extends Component {
+class AdminDashboard extends Component {
 	
     render() {
         return (
@@ -459,4 +459,4 @@ class LibrarienDashboard extends Component {
         )
     }
 }
-export default LibrarienDashboard;
+export default AdminDashboard;

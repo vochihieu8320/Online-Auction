@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 // Import Sidebar
 import { LibrarienSidebar } from './librarien_sidebar';
-class LibrarianChangePassword extends React.Component {
+class AdminChangePassword extends React.Component {
 	
     render() {
         return (
@@ -73,4 +73,4 @@ class LibrarianChangePassword extends React.Component {
         )
     }
 }
-export default LibrarianChangePassword;
+export default AdminChangePassword;

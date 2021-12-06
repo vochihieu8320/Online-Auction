@@ -46,40 +46,22 @@ class Header extends Component {
                 <i className="fas fa-times" />
               </a>
             </div>
+            
             <ul className="main-nav bg-trans">
               <li className={pathname === "/" || pathname === "" ? "active" : ""}>
                 <Link to="/">Home</Link>
               </li>
-              <li className={`has-submenu ${pathname === ('librarian-dashboard') ? 'active' :
-                pathname === ('appointments') ? 'active' : pathname === ('social-media') ? 'active' :
-                  pathname === ('schedule-timings') ? 'active' : pathname === ('my-customer') ? 'active' :
-                    pathname === ('customer-profile') ? 'active' : pathname === ('librarian-change-password') ? 'active' :
-                      pathname === ('librarian-profile-settings') ? 'active' : pathname === ('reviews') ? 'active' :
-                        pathname === ('invoices') ? 'active' : pathname === ('librarian-register') ? 'active' : ''}`}>
-                <a href="">Admin <i className="fas fa-chevron-down" /></a>
-                <ul className="submenu">
-                  
-                  <li className={pathname === "librarian-dashboard" ? "active" : ""}><Link to="/librarian-dashboard">Admin Dashboard</Link></li>
-                  <li className={pathname === "search" ? "active" : ""}><Link to="/search">Manage Category</Link></li>
-                  <li className={pathname === "appointments" ? "active" : ""}><Link to="/appointments">Upgrade Account</Link></li>
-                  {/* <li className={pathname === "schedule-timings" ? "active" : ""}><Link to="/schedule-timings">Schedule Timing</Link></li> */}
-                  <li className={pathname === "my-customer" ? "active" : ""}><Link to="/my-customer">Customer List</Link></li>
-                  <li className={pathname === "customer-profile" ? "active" : ""}><Link to="/customer-profile">Customer Profile</Link></li>
-                  {/* <li className={pathname === "chat" ? "active" : ""}><Link to="/chat">Chat</Link></li> */}
-                  {/* <li className={pathname === "invoices" ? "active" : ""}><Link to="/invoices">Invoices</Link></li> */}
-                  <li className={pathname === "librarian-profile-settings" ? "active" : ""}><Link to="/librarian-profile-settings">Profile Settings</Link></li>
-                  {/* <li className={pathname === "reviews" ? "active" : ""}><Link to="/reviews">Reviews</Link></li> */}
-                  <li className={pathname === "librarian-register" ? "active" : ""}><Link to="/librarian-register">Admin Register</Link></li>
-                </ul>
+              <li className={pathname === ('/admin-dashboard') ? 'active' : ''}>
+                <Link to = "/admin-dashboard">Admin</Link>
               </li>
               <li className={`has-submenu ${pathname === ('search') ? 'active' : pathname === ('librarian-profile') ? 'active' :
-                  pathname === ('booking') ? 'active' : pathname === ('checkout') ? 'active' :
-                    pathname === ('booking-success') ? 'active' : pathname === ('customer-dashboard') ? 'active' :
-                      pathname === ('favourites') ? 'active' : pathname === ('chat') ? 'active' :
-                        pathname === ('profile-settings') ? 'active' : pathname === ('change-password') ? 'active' : ''}`}>
+                pathname === ('booking') ? 'active' : pathname === ('checkout') ? 'active' :
+                  pathname === ('booking-success') ? 'active' : pathname === ('customer-dashboard') ? 'active' :
+                    pathname === ('favourites') ? 'active' : pathname === ('chat') ? 'active' :
+                      pathname === ('profile-settings') ? 'active' : pathname === ('change-password') ? 'active' : ''}`}>
                 <a href="">Customer <i className="fas fa-chevron-down" /></a>
                 <ul className="submenu">
-                  <li><Link to="/search">Search </Link></li>
+                  <li className={pathname === "search" ? "active" : ""}><Link to="/search">Search Product</Link></li>
                   <li className={`has-submenu ${pathname === ('map-grid') ? 'active' : pathname === ('map-list') ? 'active' : ''}`}>
                     <a href="#">Browse Listing</a>
                     <ul className="submenu">
@@ -98,7 +80,7 @@ class Header extends Component {
                       </li>
                     </ul>
                   </li>
-                  
+
                   {/* <li className={pathname === "librarian-profile" ? "active" : ""}><Link to="/librarian-profile">Librarian Profile</Link></li> */}
                   {/* <li className={pathname === "booking" ? "active" : ""}><Link to="/booking">Booking</Link></li> */}
                   <li className={pathname === "checkout" ? "active" : ""}><Link to="/checkout">Checkout</Link></li>
@@ -110,11 +92,15 @@ class Header extends Component {
                   <li className={pathname === "change-password" ? "active" : ""}><Link to="/change-password">Change Password</Link></li>
                 </ul>
               </li>
+
+
               <li className={`has-submenu ${pathname === ('voice-call') ? 'active' : pathname === ('video-call')
                 ? 'active' : pathname === ('calendar') ? 'active' : pathname === ('components') ? 'active' :
                   pathname === ('invoice-view') ? 'active' :
                     pathname === ('blank-page') ? 'active' : pathname === ('login') ? 'active' :
                       pathname === ('register') ? 'active' : pathname === ('forgot-password') ? 'active' : ''}`}>
+
+
                 <a href="">Sell <i className="fas fa-chevron-down" /></a>
                 <ul className="submenu">
 
@@ -146,8 +132,11 @@ class Header extends Component {
             </ul>
           </div>
           <ul className="nav header-navbar-rht align-items-center">
+
+
+
             {/* Flag */}
-            <li className="nav-item dropdown flag-nav">
+            {/* <li className="nav-item dropdown flag-nav">
               <a className="nav-link dropdown-toggle align-items-center text-center" data-toggle="dropdown" href="#" role="button">
                 <figure>
                   <figure>
@@ -165,8 +154,10 @@ class Header extends Component {
                 </a>
 
               </div>
-            </li>
+            </li> */}
             {/* /Flag */}
+
+
             <li className="nav-item d-flex">
               <Link to="/booking" className="nav-booking mr-2">
                 <img src={Course} width={22} alt="" />
@@ -176,6 +167,8 @@ class Header extends Component {
                 <p>$200</p>
               </Link>
             </li>
+
+
             {/* Login */}
             {pathname === "/" || pathname === "" ? <li className="nav-item contact-item">
               <i className="far fa-user mr-2" />

@@ -6,19 +6,17 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 //home
 import Home from "./components/home";
-// Librarian
-import LibrarienDashboard from "./components/librarian/librarien_dashboard";
-import Appointments from "./components/librarian/appointments";
-import ScheduleTimings from "./components/librarian/schedule_timings";
+// Admin
+import AdminDashboard from "./components/librarian/admin_dashboard";
+import UpgradeAccount from "./components/librarian/upgrade_account";
 import MyCustomer from "./components/librarian/my_customer";
-import CustomerProfile from "./components/librarian/customer_profile";
-import Chat from "./components/librarian/chat";
-import LibrarienProfileSettings from "./components/librarian/admin_profile_settings";
-import Invoices from "./components/librarian/invoices";
-import Reviews from "./components/librarian/reviews";
-import LibrarienRegister from "./components/librarian/librarian_register";
-import SocialMedia from "./components/librarian/social_media";
-import LibrarianChangePassword from "./components/librarian/change_password";
+import AdminProfileSettings from "./components/librarian/admin_profile_settings";
+import EditCategory from "./components/librarian/edit-category";
+import EditEditCategory from "./components/librarian/edit-edit-category";
+import AddCategory from "./components/librarian/add-category";
+import AdminRegister from "./components/librarian/admin_register";
+import EditProduct from "./components/librarian/edit-product";
+import AdminChangePassword from "./components/librarian/change_password";
 //School
 
 import Search from "./components/customer/search";
@@ -83,21 +81,18 @@ render() {
         <Switch>
           {/* home */}
           <Route exact path="/" component={Home} />          
-          {/* Librarien */}   
-          <Route exact path="/librarian-dashboard" component={LibrarienDashboard} />   
-          <Route exact path="/appointments" component={Appointments} />  
+          {/* Admin */}   
+          <Route exact path="/admin-dashboard" component={AdminDashboard} />   
+          <Route exact path="/upgrade-account" component={UpgradeAccount} />  
           <Route exact path="/my-customer" component={MyCustomer} /> 
-          <Route exact path="/customer-profile" component={CustomerProfile} />  
-          <Route exact path="/chat" component={Chat}/>  
-          <Route exact path="/librarian-profile-settings" component={LibrarienProfileSettings}/> 
-          <Route exact path="/reviews" component={Reviews} />
-          <Route exact path="/social-media" component={SocialMedia} />
-          <Route exact path="/invoices" component={Invoices} />                  
-          <Route exact path="/schedule-timings" component={ScheduleTimings} /> 
-          <Route exact path="/librarian-register" component={LibrarienRegister} />  
-          <Route exact path="/librarian-change-password" component={LibrarianChangePassword} />          
+          <Route exact path="/admin-profile-settings" component={AdminProfileSettings}/> 
+          <Route exact path="/edit-category" component={EditCategory} />
+          <Route exact path="/edit-edit-category" component={EditEditCategory} />
+          <Route exact path="/add-category" component={AddCategory} />
+          <Route exact path="/edit-product" component={EditProduct} />                  
+          <Route exact path="/admin-register" component={AdminRegister} />  
+          <Route exact path="/change-password" component={AdminChangePassword} />          
           {/* School */}  
-         
           <Route exact path="/search" component={Search} />
           <Route exact path="/librarian-profile" component={LibrarianProfile} />   
           <Route exact path="/booking" component={Booking} />

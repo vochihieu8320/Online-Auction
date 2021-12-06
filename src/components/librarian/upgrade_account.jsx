@@ -7,7 +7,7 @@ import { LibrarienSidebar } from './librarien_sidebar';
 import { Clients_01,Clients_02,Clients_03,Clients_04,Clients_05,Clients_06,Clients_07,Clients_08,
   Clients_09,Clients_10,Clients_11,Clients_0 } from "../imagepath"
 
-class Appointments extends React.Component {
+class UpgradeAccount extends React.Component {
 	
     render() {
         return (
@@ -20,10 +20,10 @@ class Appointments extends React.Component {
                 <nav aria-label="breadcrumb" className="page-breadcrumb">
                   <ol className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                    <li className="breadcrumb-item active" aria-current="page">Appointments</li>
+                    <li className="breadcrumb-item active" aria-current="page">Upgrade Account</li>
                   </ol>
                 </nav>
-                <h2 className="breadcrumb-title">Appointments</h2>
+                <h2 className="breadcrumb-title">Upgrade Account</h2>
               </div>
             </div>
           </div>
@@ -445,4 +445,4 @@ class Appointments extends React.Component {
         )
     }
 }
-export default Appointments;
+export default UpgradeAccount;

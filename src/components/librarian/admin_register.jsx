@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import {LoginBanner} from "../imagepath"
 
-class LibrarienRegister extends React.Component {
+class AdminRegister extends React.Component {
 	
     render() {
         return (
@@ -68,4 +68,4 @@ class LibrarienRegister extends React.Component {
         )
     }
 }
-export default LibrarienRegister;
+export default AdminRegister;

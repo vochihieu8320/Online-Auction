@@ -10,77 +10,59 @@ class LibrarienSidebar extends React.Component {
             <div className="profile-sidebar">
                   <div className="widget-profile pro-widget-content">
                     <div className="profile-info-widget">
-                      <a href="#" className="booking-doc-img">
-                        <img src={Admin_thumb_02} alt="User Image" />
-                      </a>
                       <div className="profile-det-info">
-                        <h3>Darren Elder</h3>
-                        <div className="receiver-details">
-                          <h5 className="mb-0">B.Li.Sc., M.Li.Sc., Library and Information Science</h5>
-                        </div>
+                        <h3>ADMIN</h3>
                       </div>
                     </div>
                   </div>
                   <div className="dashboard-widget">
                     <nav className="dashboard-menu">
                       <ul>
-                        <li className={`${pathname === "librarian-dashboard" ? "active" : ""}`}>
-                          <Link to="/librarian-dashboard">
+                        <li>
+                          <Link to="/admin-dashboard">
                             <i className="fas fa-columns" />
                             <span>Dashboard</span>
                           </Link>
                         </li>
-                        <li className={`${pathname === "appointments" ? "active" : ""}`}>
-                          <Link to="/appointments">
-                            <i className="fas fa-calendar-check" />
-                            <span>Appointments</span>
+                        <li>
+                          <Link to="/edit-category">
+                            <i class="fas fa-boxes"></i>
+                            <span>Manage Category</span>
                           </Link>
                         </li>
-                        <li className={`${pathname === "my-customer" ? "active" : ""}`}>
+                        <li>
+                          <Link to="/upgrade-account">
+                            <i className="fas fa-calendar-check" />
+                            <span>Upgrade Account</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/edit-product">
+                          <i class="fas fa-box-open"></i>
+                            <span>Manage Product</span>
+                          </Link>
+                        </li>
+                        <li>
                           <Link to="/my-customer">
                             <i className="fas fa-user-injured" />
                             <span>My Customers</span>
                           </Link>
                         </li>
-                        <li className={`${pathname === "schedule-timings" ? "active" : ""}`}>
-                          <Link to="/schedule-timings">
-                            <i className="fas fa-hourglass-start" />
-                            <span>Schedule Timings</span>
-                          </Link>
-                        </li>
-                        <li className={`${pathname === "invoices" ? "active" : ""}`}>
-                          <Link to="/invoices">
-                            <i className="fas fa-file-invoice" />
-                            <span>Invoices</span>
-                          </Link>
-                        </li>
-                        <li className={`${pathname === "reviews" ? "active" : ""}`}>
-                          <Link to="/reviews">
-                            <i className="fas fa-star" />
-                            <span>Reviews</span>
-                          </Link>
-                        </li>
-                        <li className={`${pathname === "chat" ? "active" : ""}`}>
-                          <Link to="/chat">
-                            <i className="fas fa-comments" />
-                            <span>Message</span>
-                            <small className="unread-msg">23</small>
-                          </Link>
-                        </li>
-                        <li className={`${pathname === "librarian-profile-settings" ? "active" : ""}`}>
-                          <Link to="/librarian-profile-settings">
+               
+                        <li>
+                          <Link to="/admin-profile-settings">
                             <i className="fas fa-user-cog" />
                             <span>Profile Settings</span>
                           </Link>
                         </li>
-                        <li className={`${pathname === "social-media" ? "active" : ""}`}>
+                        {/* <li className={`${pathname === "social-media" ? "active" : ""}`}>
                           <Link to="/social-media">
                             <i className="fas fa-share-alt" />
                             <span>Social Media</span>
                           </Link>
-                        </li>
-                        <li className={`${pathname === "librarian-change-password" ? "active" : ""}`}>
-                          <Link to="/librarian-change-password">
+                        </li> */}
+                        <li>
+                          <Link to="/change-password">
                             <i className="fas fa-lock" />
                             <span>Change Password</span>
                           </Link>
