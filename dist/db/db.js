@@ -13,11 +13,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const host_db = process.env.db || "mongodb+srv://1803:1803@cluster0.dwvix.mongodb.net/Auction";
+const host_db = process.env.db || "mongodb+srv://1803:1803@cluster0.dwvix.mongodb.net/Auction?retryWrites=true&w=majority";
 function connect() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield mongoose_1.default.connect(host_db);
+            yield mongoose_1.default.connect('mongodb+srv://1803:1803@cluster0.dwvix.mongodb.net/Auction?retryWrites=true&w=majority');
             console.log("connect to mongoDB");
         }
         catch (error) {
