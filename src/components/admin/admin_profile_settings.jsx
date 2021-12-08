@@ -4,7 +4,7 @@ import { DropzoneArea } from 'material-ui-dropzone'
 import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 // Import Sidebar
-import { LibrarienSidebar } from './librarien_sidebar';
+import { LibrarienSidebar } from './admin_sidebar';
 // Import Images
 import { Admin_thumb_02, Feature_01, Feature_02 } from "../imagepath"
 
@@ -325,6 +325,11 @@ class AdminProfileSettings extends React.Component {
 										</div>
 									</div>
 								</div>
+								
+								<div className="submit-section">
+									<button type="submit" className="btn btn-primary submit-btn">Save</button>
+								</div>
+
 								{/* /About Me */}
 								{/* Clinic Info */}
 

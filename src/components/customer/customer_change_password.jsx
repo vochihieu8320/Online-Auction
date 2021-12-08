@@ -4,7 +4,7 @@ import StickyBox from "react-sticky-box";
 // Import Sidebar
 import { CustomerSidebar } from './customer_sidebar';
 
-class ChangePassword extends React.Component {
+class CustomerChangePassword extends React.Component {
     render() {
         return(
             <>
@@ -73,4 +73,4 @@ class ChangePassword extends React.Component {
         )
     }
 }
-export default ChangePassword;
+export default CustomerChangePassword;

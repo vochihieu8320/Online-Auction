@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 // Import Sidebar
-import { LibrarienSidebar } from './librarien_sidebar';
+import { LibrarienSidebar } from './admin_sidebar';
 // Import Images
 import { Clients_01,Clients_02,Clients_03,Clients_04,Clients_05,Clients_06,Clients_07,Clients_08,
   Clients_09,Clients_10,Clients_11,Clients_0 } from "../imagepath"

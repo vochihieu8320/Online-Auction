@@ -25,7 +25,7 @@ class LibrarienSidebar extends React.Component {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/edit-category">
+                          <Link to="/category">
                             <i class="fas fa-boxes"></i>
                             <span>Manage Category</span>
                           </Link>

@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 // Import Sidebar
-import { LibrarienSidebar } from './librarien_sidebar';
+import { LibrarienSidebar } from './admin_sidebar';
+import Cancel from './cancel';
 // import {AddCategory} from'./add-category';
 // Import Images
 import {
@@ -10,7 +11,7 @@ import {
     Clients_09, Clients_10, Clients_11, Clients_0
 } from "../imagepath"
 
-class EditCategory extends React.Component {
+class Category extends React.Component {
 
     render() {
         return (
@@ -68,61 +69,19 @@ class EditCategory extends React.Component {
                                                 <i className="far fa-eye" /> Detail
                                             </a>
                                             <a href="" className="btn btn-sm bg-success-light">
-                                                <i className="fas fa-edit" /><Link to="/edit-edit-category"> Edit</Link>
+                                                <i className="fas fa-edit" /><Link to="/edit-category"> Edit</Link>
                                             </a>
                                             <a href="" className="btn btn-sm bg-danger-light">
-                                                <i className="fas fa-times" /> Cancel
+                                                <i className="fas fa-times" /> <Link to="/cancel">Cancel</Link>
                                             </a>
                                         </div>
                                     </div>
                                     {/* /Appointment List */}
                                     {/* Appointment List */}
-                                    <div className="appointment-list">
-                                        <div className="profile-info-widget">
-                                            <Link to="" className="booking-doc-img">
-                                                <img src={Clients_01} alt="User Image" />
-                                            </Link>
-                                            <div className="profile-det-info">
-                                                <h3><Link to="">Charlene Reed </Link></h3>
-
-                                            </div>
-                                        </div>
-                                        <div className="appointment-action">
-                                            <a href="#" className="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-                                                <i className="far fa-eye" /> Detail
-                                            </a>
-                                            <a href="" className="btn btn-sm bg-success-light">
-                                                <i className="fas fa-edit" /> Edit
-                                            </a>
-                                            <a href="" className="btn btn-sm bg-danger-light">
-                                                <i className="fas fa-times" /> Cancel
-                                            </a>
-                                        </div>
-                                    </div>
+                                    
                                     {/* /Appointment List */}
                                     {/* Appointment List */}
-                                    <div className="appointment-list">
-                                        <div className="profile-info-widget">
-                                            <Link to="" className="booking-doc-img">
-                                                <img src={Clients_02} alt="User Image" />
-                                            </Link>
-                                            <div className="profile-det-info">
-                                                <h3><Link to="">Travis Trimble</Link></h3>
-                                            </div>
-                                        </div>
-                                        <div className="appointment-action">
-                                            <a href="#" className="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-                                                <i className="far fa-eye" /> Detail
-                                            </a>
-                                            <a href="" className="btn btn-sm bg-success-light">
-                                                <i className="fas fa-edit" /> Edit
-                                            </a>
-
-                                            <a href="" className="btn btn-sm bg-danger-light">
-                                                <i className="fas fa-times" /> Cancel
-                                            </a>
-                                        </div>
-                                    </div>
+                                   
                                     {/* /Appointment List */}
                                     {/* Appointment List */}
 
@@ -165,4 +124,4 @@ class EditCategory extends React.Component {
         )
     }
 }
-export default EditCategory;
+export default Category;

@@ -43,13 +43,13 @@ class CustomerSidebar extends React.Component {
                             <span>Favourites</span>
                           </Link>
                         </li>
-                        <li className={`${pathname === "chat" ? "active" : ""}`}>
+                        {/* <li className={`${pathname === "chat" ? "active" : ""}`}>
                           <Link to="/chat">
                             <i className="fas fa-comments" />
                             <span>Message</span>
                             <small className="unread-msg">23</small>
                           </Link>
-                        </li>
+                        </li> */}
                         <li className={`${pathname === "profile-settings" ? "active" : ""}`}>
                           <Link to="/profile-settings">
                             <i className="fas fa-user-cog" />

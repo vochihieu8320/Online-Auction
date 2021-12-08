@@ -2,99 +2,141 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 // Import Images
-import { Admin_thumb_01,Admin_thumb_02,Admin_thumb_03,Admin_thumb_04,Admin_thumb_06,Feature_01,Feature_02,
-  Feature_03,Feature_04,Specialities_01,Specialities_03,Specialities_04,Specialities_05 } from "../imagepath"
+import {
+  Admin_thumb_01, Admin_thumb_02, Admin_thumb_03, Admin_thumb_04, Admin_thumb_06, Feature_01, Feature_02,
+  Feature_03, Feature_04, Specialities_01, Specialities_03, Specialities_04, Specialities_05
+} from "../imagepath"
 
 class Search extends React.Component {
-	
-    render() {
-        return (
-			<>
-			    {/* Breadcrumb */}
-          <div className="breadcrumb-bar">
+
+  render() {
+    return (
+      <>
+        {/* Breadcrumb */}
+        <div className="breadcrumb-bar">
           <div className="container-fluid">
             <div className="row align-items-center">
               <div className="col-md-8 col-12">
                 <nav aria-label="breadcrumb" className="page-breadcrumb">
                   <ol className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                    <li className="breadcrumb-item active" aria-current="page">Search</li>
+                    <li className="breadcrumb-item active" aria-current="page">Listing Product</li>
                   </ol>
                 </nav>
-                <h2 className="breadcrumb-title">2245 matches found for : Archivist In Bangalore</h2>
+                <h2 className="breadcrumb-title">Product</h2>
               </div>
+
               <div className="col-md-4 col-12 d-md-block d-none">
                 <div className="sort-by">
                   <span className="sort-title">Sort by</span>
                   <span className="sortby-fliter">
                     <select className="form-control select">
                       <option>Select</option>
-                      <option className="sorting">Rating</option>
-                      <option className="sorting">Popular</option>
-                      <option className="sorting">Latest</option>
-                      <option className="sorting">Free</option>
+                      <option className="sorting">Descending end time</option>
+                      <option className="sorting">Increasing price</option>
+                      
                     </select>
                   </span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
         {/* /Breadcrumb */}
         {/* Page Content */}
+
         <div className="content">
           <div className="container">
             <div className="row">
               <div className="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
                 <StickyBox offsetTop={20} offsetBottom={20}>
-                {/* Search Filter */}
-                <div className="card search-filter">
-                  <div className="card-header">
-                    <h4 className="card-title mb-0">Search Filter</h4>
-                  </div>
-                  <div className="card-body">
-                    <div className="filter-widget">
-                      <div>
-                        <input type="date" className="form-control datetimepicker" placeholder="Select Date" />
-                      </div>			
-                    </div> 
-                    <div className="filter-widget">
-                      <h4>Select Specialist</h4>
-                      <div>
-                        <label className="custom_check">
-                          <input type="checkbox" name="select_specialist" defaultChecked />
-                          <span className="checkmark" /> Archivist
-                        </label>
-                      </div>
-                      <div>
-                        <label className="custom_check">
-                          <input type="checkbox" name="select_specialist" defaultChecked />
-                          <span className="checkmark" /> Library Technician
-                        </label>
-                      </div>
-                      <div>
-                        <label className="custom_check">
-                          <input type="checkbox" name="select_specialist" />
-                          <span className="checkmark" /> Senior Librarian
-                        </label>
-                      </div>
-                      <div>
-                        <label className="custom_check">
-                          <input type="checkbox" name="select_specialist" />
-                          <span className="checkmark" /> Assistant Librarian
-                        </label>
-                      </div> 
+
+                  {/* Search Filter */}
+                  <div className="card search-filter">
+                    <div className="card-header">
+                      <h4 className="card-title mb-0">Search Filter</h4>
                     </div>
-                    <div className="btn-search">
-                      <button type="button" className="btn btn-block">Search</button>
-                    </div>	
+                    <div className="card-body">
+                      {/* <div className="filter-widget">
+                        <div>
+                          <input type="date" className="form-control datetimepicker" placeholder="Select Date" />
+                        </div>
+                      </div> */}
+                      <div className="filter-widget">
+                        <h4>Select Category</h4>
+                        <div>
+                          <label className="custom_check">
+                            <input type="checkbox" name="select_specialist" defaultChecked />
+                            <span className="checkmark" /> Electronic
+                          </label>
+                        </div>
+                        <div>
+                          <label className="custom_check">
+                            <input type="checkbox" name="select_specialist" defaultChecked />
+                            <span className="checkmark" /> Library Technician
+                          </label>
+                        </div>
+                        <h4>Select New Product</h4>
+                        <div>
+                          <label className="custom_check">
+                            <input type="checkbox" name="select_specialist" defaultChecked />
+                            <span className="checkmark" /> 5 Minutes
+                          </label>
+                        </div>
+                        <div>
+                          <label className="custom_check">
+                            <input type="checkbox" name="select_specialist" defaultChecked />
+                            <span className="checkmark" /> 30 Minutes
+                          </label>
+                        </div>
+                        {/* <div>
+                          <label className="custom_check">
+                            <input type="checkbox" name="select_specialist" />
+                            <span className="checkmark" /> Senior Librarian
+                          </label>
+                        </div> */}
+                        {/* <div>
+                          <label className="custom_check">
+                            <input type="checkbox" name="select_specialist" />
+                            <span className="checkmark" /> Assistant Librarian
+                          </label>
+                        </div> */}
+                      </div>
+                      <div className="btn-search">
+                        <button type="button" className="btn btn-block">Search</button>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                {/* /Search Filter */}
+                  {/* /Search Filter */}
                 </StickyBox>
+
               </div>
+              {/* <div className="card search-widget">
+                <div className="card-body">
+                  <form className="search-form">
+                    <div className="input-group">
+                      <input type="text" placeholder="Tìm kiếm..." className="form-control" />
+                      <div className="input-group-append">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div> */}
               <div className="col-md-12 col-lg-8 col-xl-9">
                 {/* Librarian Widget */}
+                {/* <div className="card"> */}
+                <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      {/* <button id="button-addon8" type="submit" class="btn btn-danger"><i class="fa fa-search"></i></button> */}
+                      <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                    </div>
+                    <input type="search" placeholder="What are you looking for?" aria-describedby="button-addon1" class="form-control border-0 bg-light"/>
+                  </div>
+                </div>
+                {/* </div> */}
+
                 <div className="card">
                   <div className="card-body">
                     <div className="sender-widget">
@@ -105,7 +147,7 @@ class Search extends React.Component {
                           </Link >
                         </div>
                         <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Ruby Perrin</Link ></h4> 
+                          <h4 className="doc-name"><Link to="/librarian-profile">Ruby Perrin</Link ></h4>
                           <h5 className="doc-department"><img src={Specialities_05} className="img-fluid" alt="Speciality" />Library Technician</h5>
                           <div className="rating">
                             <i className="fas fa-star filled" />
@@ -156,8 +198,8 @@ class Search extends React.Component {
                           </ul>
                         </div>
                         <div className="shop-booking">
-                          <Link  className="view-pro-btn" to="/librarian-profile">View Profile</Link >
-                          <Link  className="apt-btn" to="/booking">Book Now</Link >
+                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link >
+                          <Link className="apt-btn" to="/booking">Book Now</Link >
                         </div>
                       </div>
                     </div>
@@ -175,7 +217,7 @@ class Search extends React.Component {
                           </Link >
                         </div>
                         <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Darren Elder</Link ></h4> 
+                          <h4 className="doc-name"><Link to="/librarian-profile">Darren Elder</Link ></h4>
                           <h5 className="doc-department"><img src={Specialities_05} className="img-fluid" alt="Speciality" />Library Technician</h5>
                           <div className="rating">
                             <i className="fas fa-star filled" />
@@ -226,7 +268,7 @@ class Search extends React.Component {
                           </ul>
                         </div>
                         <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link> 
+                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link>
                           <Link className="apt-btn" to="/booking">Book Now</Link>
                         </div>
                       </div>
@@ -245,7 +287,7 @@ class Search extends React.Component {
                           </Link>
                         </div>
                         <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Deborah Angel</Link></h4> 
+                          <h4 className="doc-name"><Link to="/librarian-profile">Deborah Angel</Link></h4>
                           <p className="doc-department"><img src={Specialities_04} className="img-fluid" alt="Speciality" />Library Technician</p>
                           <div className="rating">
                             <i className="fas fa-star filled" />
@@ -296,7 +338,7 @@ class Search extends React.Component {
                           </ul>
                         </div>
                         <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link> 
+                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link>
                           <Link className="apt-btn" to="/booking">Book Now</Link>
                         </div>
                       </div>
@@ -315,7 +357,7 @@ class Search extends React.Component {
                           </Link>
                         </div>
                         <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Sofia Brient</Link></h4> 
+                          <h4 className="doc-name"><Link to="/librarian-profile">Sofia Brient</Link></h4>
                           <p className="doc-department"><img src={Specialities_01} className="img-fluid" alt="Speciality" />Library Technician</p>
                           <div className="rating">
                             <i className="fas fa-star filled" />
@@ -366,7 +408,7 @@ class Search extends React.Component {
                           </ul>
                         </div>
                         <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link> 
+                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link>
                           <Link className="apt-btn" to="/booking">Book Now</Link>
                         </div>
                       </div>
@@ -385,7 +427,7 @@ class Search extends React.Component {
                           </Link>
                         </div>
                         <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Katharine Berthold</Link></h4> 
+                          <h4 className="doc-name"><Link to="/librarian-profile">Katharine Berthold</Link></h4>
                           <p className="doc-department"><img src={Specialities_03} className="img-fluid" alt="Speciality" />Library Technician</p>
                           <div className="rating">
                             <i className="fas fa-star filled" />
@@ -436,7 +478,7 @@ class Search extends React.Component {
                           </ul>
                         </div>
                         <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link> 
+                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link>
                           <Link className="apt-btn" to="/booking">Book Now</Link>
                         </div>
                       </div>
@@ -445,15 +487,15 @@ class Search extends React.Component {
                 </div>
                 {/* /Librarian Widget */}
                 <div className="load-more text-center">
-                  <a className="btn btn-primary btn-sm" href="">Load More</a>	
-                </div>	
+                  <a className="btn btn-primary btn-sm" href="">Load More</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>		
+        </div>
         {/* /Page Content */}
-			</>
-        )
-    }
+      </>
+    )
+  }
 }
 export default Search;

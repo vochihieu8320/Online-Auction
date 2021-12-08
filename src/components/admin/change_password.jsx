@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 // Import Sidebar
-import { LibrarienSidebar } from './librarien_sidebar';
+import { LibrarienSidebar } from './admin_sidebar';
 class AdminChangePassword extends React.Component {
 	
     render() {

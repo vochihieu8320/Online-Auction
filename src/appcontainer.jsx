@@ -7,27 +7,24 @@ import Footer from "./components/footer";
 //home
 import Home from "./components/home";
 // Admin
-import AdminDashboard from "./components/librarian/admin_dashboard";
-import UpgradeAccount from "./components/librarian/upgrade_account";
-import MyCustomer from "./components/librarian/my_customer";
-import AdminProfileSettings from "./components/librarian/admin_profile_settings";
-import EditCategory from "./components/librarian/edit-category";
-import EditEditCategory from "./components/librarian/edit-edit-category";
-import AddCategory from "./components/librarian/add-category";
-import AdminRegister from "./components/librarian/admin_register";
-import EditProduct from "./components/librarian/edit-product";
-import AdminChangePassword from "./components/librarian/change_password";
-//School
-
+import AdminDashboard from "./components/admin/admin_dashboard";
+import UpgradeAccount from "./components/admin/upgrade_account";
+import MyCustomer from "./components/admin/my_customer";
+import AdminProfileSettings from "./components/admin/admin_profile_settings";
+import Category from "./components/admin/category";
+import EditCategory from "./components/admin/edit-category";
+import AddCategory from "./components/admin/add-category";
+import AdminRegister from "./components/admin/admin_register";
+import EditProduct from "./components/admin/edit-product";
+import AdminChangePassword from "./components/admin/change_password";
+import Cancel from "./components/admin/cancel";
+//Customer
 import Search from "./components/customer/search";
-import LibrarianProfile from "./components/customer/librarian_profile";
-import Booking from "./components/customer/booking";
 import Checkout from "./components/customer/checkout";
-import BookingSuccess from "./components/customer/booking_success";
 import CustomerDashboard from "./components/customer/customer_dashboard";
 import Favourites from "./components/customer/favourites";
 import ProfileSettings from "./components/customer/profile_settings";
-import ChangePassword from "./components/customer/change_password";
+import CustomerChangePassword from "./components/customer/customer_change_password";
 //pages
 
 import Calendar from "./components/pages/calendar";
@@ -86,22 +83,20 @@ render() {
           <Route exact path="/upgrade-account" component={UpgradeAccount} />  
           <Route exact path="/my-customer" component={MyCustomer} /> 
           <Route exact path="/admin-profile-settings" component={AdminProfileSettings}/> 
+          <Route exact path="/category" component={Category} />
           <Route exact path="/edit-category" component={EditCategory} />
-          <Route exact path="/edit-edit-category" component={EditEditCategory} />
           <Route exact path="/add-category" component={AddCategory} />
           <Route exact path="/edit-product" component={EditProduct} />                  
           <Route exact path="/admin-register" component={AdminRegister} />  
-          <Route exact path="/change-password" component={AdminChangePassword} />          
-          {/* School */}  
+          <Route exact path="/change-password" component={AdminChangePassword} />    
+          <Route exact path="/cancel" component={Cancel} />       
+          {/* Customer */}  
           <Route exact path="/search" component={Search} />
-          <Route exact path="/librarian-profile" component={LibrarianProfile} />   
-          <Route exact path="/booking" component={Booking} />
           <Route exact path="/checkout" component={Checkout} />
-          <Route exact path="/booking-success" component={BookingSuccess} /> 
           <Route exact path="/customer-dashboard" component={CustomerDashboard} />
           <Route exact path="/favourites" component={Favourites} />  
           <Route exact path="/profile-settings" component={ProfileSettings} />
-          <Route exact path="/change-password" component={ChangePassword} />           
+          <Route exact path="/customer-change-password" component={CustomerChangePassword} />           
           {/* pages */}   
              
           <Route exact path="/calendar" component={Calendar} />
@@ -111,8 +106,6 @@ render() {
           <Route exact path="/login" component={Login} /> 
           <Route exact path="/register" component={Register} />
           <Route exact path="/forgot-password" component={ForgotPassword} />
-          {/* blog */}   
-          
            
           <Route exact path="/privacy-policy" component={PrivacyPolicy} />
           <Route exact path="/term-condition" component={TermsCondition} />  

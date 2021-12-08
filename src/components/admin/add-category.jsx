@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 import { Admin_thumb_01 } from '../imagepath';
 // Import Sidebar
-import { LibrarienSidebar } from './librarien_sidebar';
+import { LibrarienSidebar } from './admin_sidebar';
 
 class AddCategory extends React.Component {
 
