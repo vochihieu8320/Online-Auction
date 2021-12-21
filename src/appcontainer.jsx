@@ -20,17 +20,20 @@ import AdminChangePassword from "./components/admin/change_password";
 import Cancel from "./components/admin/cancel";
 //Customer
 import Search from "./components/customer/search";
+import Detail from "./components/customer/detail-product";
 import Checkout from "./components/customer/checkout";
 import CustomerDashboard from "./components/customer/customer_dashboard";
 import Favourites from "./components/customer/favourites";
 import ProfileSettings from "./components/customer/profile_settings";
 import CustomerChangePassword from "./components/customer/customer_change_password";
+import CustomerUpgrade from "./components/customer/send-request";
+import PostProduct from "./components/customer/post-product";
 //pages
 
 import Calendar from "./components/pages/calendar";
 import Components from "./components/pages/components";
 import InvoiceView from "./components/pages/invoice_view";
-import BlankPage from "./components/pages/blank_page";
+
 import Login from "./components/pages/login";
 import Register from "./components/pages/register";
 import ForgotPassword from "./components/pages/forgot_password";
@@ -56,6 +59,7 @@ import './assets/js/slick.js';
 import './assets/js/header.js';
 // import './assets/js/owl-scroll.js';
 import './assets/js/script.js';
+
 
 
 class AppUniversal extends Component {
@@ -97,12 +101,15 @@ render() {
           <Route exact path="/favourites" component={Favourites} />  
           <Route exact path="/profile-settings" component={ProfileSettings} />
           <Route exact path="/customer-change-password" component={CustomerChangePassword} />           
+          <Route exact path="/detail-product" component={Detail} />  
+          <Route exact path="/send-request" component={CustomerUpgrade} /> 
+          <Route exact path="/post-product" component={PostProduct} /> 
           {/* pages */}   
              
           <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/components" component={Components} />
           <Route exact path="/invoice-view" component={InvoiceView} />
-          <Route exact path="/blank-page" component={BlankPage} />
+        
           <Route exact path="/login" component={Login} /> 
           <Route exact path="/register" component={Register} />
           <Route exact path="/forgot-password" component={ForgotPassword} />

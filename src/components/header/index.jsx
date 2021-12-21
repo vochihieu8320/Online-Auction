@@ -58,11 +58,11 @@ class Header extends Component {
                 <Link to="/search">Bidding</Link>
               </li>
               <li>
-                <Link to="/search">Selling</Link>
+                <Link to="/post-product">Selling</Link>
               </li>
-              {/* <li>
+              <li>
                 <Link to="/customer-dashboard">Customer</Link>
-              </li> */}
+              </li>
               {/* <li className={`has-submenu ${pathname === ('search') ? 'active' : pathname === ('librarian-profile') ? 'active' :
                 pathname === ('booking') ? 'active' : pathname === ('checkout') ? 'active' :
                   pathname === ('booking-success') ? 'active' : pathname === ('customer-dashboard') ? 'active' :
@@ -113,7 +113,7 @@ class Header extends Component {
                 <a href="">Sell <i className="fas fa-chevron-down" /></a>
                 {/* <ul className="submenu"> */}
 
-              {/* <li><Link to="/search">Search </Link></li> */} */
+              {/* <li><Link to="/search">Search </Link></li> */} 
               {/* <li className={pathname === "calendar" ? "active" : ""}><Link to="/calendar">Calendar</Link></li> */}
               {/* <li className={pathname === "components" ? "active" : ""}><Link to="/components">Components</Link></li>
                   <li className={`has-submenu ${pathname === ('invoice-view') ? 'active' : ''}`}>

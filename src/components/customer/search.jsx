@@ -34,7 +34,7 @@ class Search extends React.Component {
                       <option>Select</option>
                       <option className="sorting">Descending end time</option>
                       <option className="sorting">Increasing price</option>
-                      
+
                     </select>
                   </span>
                 </div>
@@ -112,27 +112,17 @@ class Search extends React.Component {
                 </StickyBox>
 
               </div>
-              {/* <div className="card search-widget">
-                <div className="card-body">
-                  <form className="search-form">
-                    <div className="input-group">
-                      <input type="text" placeholder="Tìm kiếm..." className="form-control" />
-                      <div className="input-group-append">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div> */}
+
               <div className="col-md-12 col-lg-8 col-xl-9">
                 {/* Librarian Widget */}
                 {/* <div className="card"> */}
                 <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
                   <div class="input-group">
                     <div class="input-group-prepend">
-                      {/* <button id="button-addon8" type="submit" class="btn btn-danger"><i class="fa fa-search"></i></button> */}
+
                       <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
                     </div>
-                    <input type="search" placeholder="What are you looking for?" aria-describedby="button-addon1" class="form-control border-0 bg-light"/>
+                    <input type="search" placeholder="What are you looking for?" aria-describedby="button-addon1" class="form-control border-0 bg-light" />
                   </div>
                 </div>
                 {/* </div> */}
@@ -145,18 +135,11 @@ class Search extends React.Component {
                           <Link to="/librarian-profile">
                             <img src={Admin_thumb_01} className="img-fluid" alt="User Image" />
                           </Link >
+                          
                         </div>
                         <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Ruby Perrin</Link ></h4>
-                          <h5 className="doc-department"><img src={Specialities_05} className="img-fluid" alt="Speciality" />Library Technician</h5>
-                          <div className="rating">
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star" />
-                            <span className="d-inline-block average-rating">(17)</span>
-                          </div>
+                          <h4 className="doc-name"><Link to="/librarian-profile">Iphone X</Link ></h4>
+                          <h5 className="doc-department">Di Động</h5>
                           <div className="shop-details">
                             <p className="doc-location"><i className="fas fa-map-marker-alt" /> Florida, USA</p>
                             <ul className="shop-gallery">
@@ -182,24 +165,25 @@ class Search extends React.Component {
                               </li>
                             </ul>
                           </div>
-                          <div className="shop-services">
+                          {/* <div className="shop-services">
                             <span>Library Technician</span>
                             <span> Archivist</span>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                       <div className="doc-info-right">
                         <div className="clini-infos">
                           <ul>
-                            <li><i className="far fa-thumbs-up" /> 98%</li>
-                            <li><i className="far fa-comment" /> 17 Feedback</li>
-                            <li><i className="fas fa-map-marker-alt" /> Florida, USA</li>
+                            <li ><Link to=""><i class="fas fa-heart"></i>Add to Wishlist</Link ></li>
+                            {/* <li><i className="far fa-comment" /> 17 Feedback</li>
+                            <li><i className="fas fa-map-marker-alt" /> Florida, USA</li> */}
+                            
                             <li><i className="far fa-money-bill-alt" /> $300 - $1000 <i className="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum" /> </li>
                           </ul>
                         </div>
                         <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link >
-                          <Link className="apt-btn" to="/booking">Book Now</Link >
+                          <Link className="view-pro-btncl" to="/detail-product">View</Link >
+                          <Link className="apt-btn" to="/booking">Buy Now</Link >
                         </div>
                       </div>
                     </div>
@@ -207,284 +191,16 @@ class Search extends React.Component {
                 </div>
                 {/* /Librarian Widget */}
                 {/* Librarian Widget */}
-                <div className="card">
-                  <div className="card-body">
-                    <div className="sender-widget">
-                      <div className="doc-info-left">
-                        <div className="sender-img">
-                          <Link to="/librarian-profile">
-                            <img src={Admin_thumb_02} className="img-fluid" alt="User Image" />
-                          </Link >
-                        </div>
-                        <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Darren Elder</Link ></h4>
-                          <h5 className="doc-department"><img src={Specialities_05} className="img-fluid" alt="Speciality" />Library Technician</h5>
-                          <div className="rating">
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star" />
-                            <span className="d-inline-block average-rating">(35)</span>
-                          </div>
-                          <div className="shop-details">
-                            <p className="doc-location"><i className="fas fa-map-marker-alt" /> Newyork, USA</p>
-                            <ul className="shop-gallery">
-                              <li>
-                                <a href={Feature_01} data-fancybox="gallery">
-                                  <img src={Feature_01} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_02} data-fancybox="gallery">
-                                  <img src={Feature_02} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_03} data-fancybox="gallery">
-                                  <img src={Feature_03} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_04} data-fancybox="gallery">
-                                  <img src={Feature_04} alt="Feature" />
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="shop-services">
-                            <span>Library Technician</span>
-                            <span> Archivist</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="doc-info-right">
-                        <div className="clini-infos">
-                          <ul>
-                            <li><i className="far fa-thumbs-up" /> 100%</li>
-                            <li><i className="far fa-comment" /> 35 Feedback</li>
-                            <li><i className="fas fa-map-marker-alt" /> Newyork, USA</li>
-                            <li><i className="far fa-money-bill-alt" /> $50 - $300 <i className="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum" /></li>
-                          </ul>
-                        </div>
-                        <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link>
-                          <Link className="apt-btn" to="/booking">Book Now</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 {/* /Librarian Widget */}
                 {/* Librarian Widget */}
-                <div className="card">
-                  <div className="card-body">
-                    <div className="sender-widget">
-                      <div className="doc-info-left">
-                        <div className="sender-img">
-                          <Link to="/librarian-profile">
-                            <img src={Admin_thumb_03} className="img-fluid" alt="User Image" />
-                          </Link>
-                        </div>
-                        <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Deborah Angel</Link></h4>
-                          <p className="doc-department"><img src={Specialities_04} className="img-fluid" alt="Speciality" />Library Technician</p>
-                          <div className="rating">
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star" />
-                            <span className="d-inline-block average-rating">(27)</span>
-                          </div>
-                          <div className="shop-details">
-                            <p className="doc-location"><i className="fas fa-map-marker-alt" /> Georgia, USA</p>
-                            <ul className="shop-gallery">
-                              <li>
-                                <a href={Feature_01} data-fancybox="gallery">
-                                  <img src={Feature_01} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_02} data-fancybox="gallery">
-                                  <img src={Feature_02} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_03} data-fancybox="gallery">
-                                  <img src={Feature_03} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_04} data-fancybox="gallery">
-                                  <img src={Feature_04} alt="Feature" />
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="shop-services">
-                            <span>Library Technician</span>
-                            <span> Archivist</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="doc-info-right">
-                        <div className="clini-infos">
-                          <ul>
-                            <li><i className="far fa-thumbs-up" /> 99%</li>
-                            <li><i className="far fa-comment" /> 35 Feedback</li>
-                            <li><i className="fas fa-map-marker-alt" /> Newyork, USA</li>
-                            <li><i className="far fa-money-bill-alt" /> $100 - $400 <i className="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum" /></li>
-                          </ul>
-                        </div>
-                        <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link>
-                          <Link className="apt-btn" to="/booking">Book Now</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 {/* /Librarian Widget */}
                 {/* Librarian Widget */}
-                <div className="card">
-                  <div className="card-body">
-                    <div className="sender-widget">
-                      <div className="doc-info-left">
-                        <div className="sender-img">
-                          <Link to="/librarian-profile">
-                            <img src={Admin_thumb_04} className="img-fluid" alt="User Image" />
-                          </Link>
-                        </div>
-                        <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Sofia Brient</Link></h4>
-                          <p className="doc-department"><img src={Specialities_01} className="img-fluid" alt="Speciality" />Library Technician</p>
-                          <div className="rating">
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star" />
-                            <span className="d-inline-block average-rating">(4)</span>
-                          </div>
-                          <div className="shop-details">
-                            <p className="doc-location"><i className="fas fa-map-marker-alt" /> Louisiana, USA</p>
-                            <ul className="shop-gallery">
-                              <li>
-                                <a href={Feature_01} data-fancybox="gallery">
-                                  <img src={Feature_01} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_02} data-fancybox="gallery">
-                                  <img src={Feature_02} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_03} data-fancybox="gallery">
-                                  <img src={Feature_03} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_04} data-fancybox="gallery">
-                                  <img src={Feature_04} alt="Feature" />
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="shop-services">
-                            <span>Library Technician</span>
-                            <span> Archivist</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="doc-info-right">
-                        <div className="clini-infos">
-                          <ul>
-                            <li><i className="far fa-thumbs-up" /> 97%</li>
-                            <li><i className="far fa-comment" /> 4 Feedback</li>
-                            <li><i className="fas fa-map-marker-alt" /> Newyork, USA</li>
-                            <li><i className="far fa-money-bill-alt" /> $150 - $250 <i className="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum" /></li>
-                          </ul>
-                        </div>
-                        <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link>
-                          <Link className="apt-btn" to="/booking">Book Now</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 {/* /Librarian Widget */}
                 {/* Librarian Widget */}
-                <div className="card">
-                  <div className="card-body">
-                    <div className="sender-widget">
-                      <div className="doc-info-left">
-                        <div className="sender-img">
-                          <Link to="/librarian-profile">
-                            <img src={Admin_thumb_06} className="img-fluid" alt="User Image" />
-                          </Link>
-                        </div>
-                        <div className="doc-info-cont">
-                          <h4 className="doc-name"><Link to="/librarian-profile">Katharine Berthold</Link></h4>
-                          <p className="doc-department"><img src={Specialities_03} className="img-fluid" alt="Speciality" />Library Technician</p>
-                          <div className="rating">
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star filled" />
-                            <i className="fas fa-star" />
-                            <span className="d-inline-block average-rating">(52)</span>
-                          </div>
-                          <div className="shop-details">
-                            <p className="doc-location"><i className="fas fa-map-marker-alt" /> Texas, USA</p>
-                            <ul className="shop-gallery">
-                              <li>
-                                <a href={Feature_01} data-fancybox="gallery">
-                                  <img src={Feature_01} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_02} data-fancybox="gallery">
-                                  <img src={Feature_02} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_03} data-fancybox="gallery">
-                                  <img src={Feature_03} alt="Feature" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href={Feature_04} data-fancybox="gallery">
-                                  <img src={Feature_04} alt="Feature" />
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="shop-services">
-                            <span>Library Technician</span>
-                            <span> Archivist</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="doc-info-right">
-                        <div className="clini-infos">
-                          <ul>
-                            <li><i className="far fa-thumbs-up" /> 100%</li>
-                            <li><i className="far fa-comment" /> 52 Feedback</li>
-                            <li><i className="fas fa-map-marker-alt" /> Texas, USA</li>
-                            <li><i className="far fa-money-bill-alt" /> $100 - $500 <i className="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum" /></li>
-                          </ul>
-                        </div>
-                        <div className="shop-booking">
-                          <Link className="view-pro-btn" to="/librarian-profile">View Profile</Link>
-                          <Link className="apt-btn" to="/booking">Book Now</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 {/* /Librarian Widget */}
                 <div className="load-more text-center">
                   <a className="btn btn-primary btn-sm" href="">Load More</a>

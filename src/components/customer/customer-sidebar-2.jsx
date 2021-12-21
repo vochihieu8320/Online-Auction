@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // Import Images
 import {Clients_0} from '../imagepath';
 
-class CustomerSidebar extends React.Component {
+class CustomerSidebarTwo extends React.Component {
   componentDidMount(){
     if( $('body').hasClass('chat-page')){
       window.location.reload();
@@ -40,15 +40,15 @@ class CustomerSidebar extends React.Component {
                         <li className={`${pathname === "favourites" ? "active" : ""}`}>
                           <Link to="/favourites">
                             <i className="fas fa-bookmark" />
-                            <span>Favourites</span>
+                            <span>Manage Product</span>
                           </Link>
                         </li>
-                        <li className={`${pathname === "favourites" ? "active" : ""}`}>
+                        {/* <li className={`${pathname === "favourites" ? "active" : ""}`}>
                           <Link to="/send-request">
                             <i className="fas fa-bookmark" />
                             <span>Upgrade Account</span>
                           </Link>
-                        </li>
+                        </li> */}
                         {/* <li className={`${pathname === "chat" ? "active" : ""}`}>
                           <Link to="/chat">
                             <i className="fas fa-comments" />
@@ -81,4 +81,4 @@ class CustomerSidebar extends React.Component {
             )
     }
 }
-export { CustomerSidebar };
+export { CustomerSidebarTwo };

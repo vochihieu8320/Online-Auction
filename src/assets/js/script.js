@@ -294,5 +294,12 @@ Version      : 1.0
 			$('.header').removeClass('sticky');
 		}
 	});	
+	//product
+	$(document).ready(function () {
+		// MDB Lightbox Init
+		$(function () {
+		  $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+		});
+	  });
 	
 })(jQuery);
