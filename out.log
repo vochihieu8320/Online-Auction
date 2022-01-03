@@ -252,3 +252,41 @@
 2021-12-08T23:24:47: Server listen at 3000
 2021-12-08T23:24:48: connect to mongoDB
 >>>>>>> 29cd0c38b5b5de6735aab6ff93a630f4c9f3ad00
+2022-01-03T15:20:14: Server listen at 3000
+2022-01-03T15:20:14: connect to mongoDB
+2022-01-03T15:20:36: {
+2022-01-03T15:20:36:   fieldname: 'file',
+2022-01-03T15:20:36:   originalname: '3683.jpg',
+2022-01-03T15:20:36:   encoding: '7bit',
+2022-01-03T15:20:36:   mimetype: 'image/jpeg',
+2022-01-03T15:20:36:   destination: 'uploads/',
+2022-01-03T15:20:36:   filename: '92bf062b811be3687931996f52879025',
+2022-01-03T15:20:36:   path: 'uploads\\92bf062b811be3687931996f52879025',
+2022-01-03T15:20:36:   size: 195096
+2022-01-03T15:20:36: }
+2022-01-03T15:39:43: Server listen at 3000
+2022-01-03T15:39:43: connect to mongoDB
+2022-01-03T15:42:05: Server listen at 3000
+2022-01-03T15:42:05: connect to mongoDB
+2022-01-03T15:42:21: 0.18605804443359375
+2022-01-03T15:42:21: [ 'image', 'jpeg' ]
+2022-01-03T15:43:21: Server listen at 3000
+2022-01-03T15:43:21: connect to mongoDB
+2022-01-03T15:43:25: 0.18605804443359375
+2022-01-03T15:49:02: Server listen at 3000
+2022-01-03T15:49:02: connect to mongoDB
+2022-01-03T16:02:34: Server listen at 3000
+2022-01-03T16:02:34: connect to mongoDB
+2022-01-03T16:09:35: TypeError: res.jon is not a function
+2022-01-03T16:09:35:     at C:\Users\84929\app-chat-api\app-chat\dist\controller\product.controller.js:50:21
+2022-01-03T16:09:35:     at Generator.next (<anonymous>)
+2022-01-03T16:09:35:     at C:\Users\84929\app-chat-api\app-chat\dist\controller\product.controller.js:8:71
+2022-01-03T16:09:35:     at new Promise (<anonymous>)
+2022-01-03T16:09:35:     at __awaiter (C:\Users\84929\app-chat-api\app-chat\dist\controller\product.controller.js:4:12)
+2022-01-03T16:09:35:     at Add (C:\Users\84929\app-chat-api\app-chat\dist\controller\product.controller.js:38:16)
+2022-01-03T16:09:35:     at Layer.handle [as handle_request] (C:\Users\84929\app-chat-api\app-chat\node_modules\express\lib\router\layer.js:95:5)
+2022-01-03T16:09:35:     at next (C:\Users\84929\app-chat-api\app-chat\node_modules\express\lib\router\route.js:137:13)
+2022-01-03T16:09:35:     at Route.dispatch (C:\Users\84929\app-chat-api\app-chat\node_modules\express\lib\router\route.js:112:3)
+2022-01-03T16:09:35:     at Layer.handle [as handle_request] (C:\Users\84929\app-chat-api\app-chat\node_modules\express\lib\router\layer.js:95:5)
+2022-01-03T16:11:33: Server listen at 3000
+2022-01-03T16:11:33: connect to mongoDB

@@ -328,3 +328,19 @@
 2021-12-08T23:21:22:   ]
 2021-12-08T23:21:22: }
 >>>>>>> 29cd0c38b5b5de6735aab6ff93a630f4c9f3ad00
+2022-01-03T15:20:22: MulterError: Unexpected field
+2022-01-03T15:20:22:     at wrappedFileFilter (C:\Users\84929\app-chat-api\app-chat\node_modules\multer\index.js:40:19)
+2022-01-03T15:20:22:     at Busboy.<anonymous> (C:\Users\84929\app-chat-api\app-chat\node_modules\multer\lib\make-middleware.js:115:7)
+2022-01-03T15:20:22:     at Busboy.emit (events.js:400:28)
+2022-01-03T15:20:22:     at Busboy.emit (C:\Users\84929\app-chat-api\app-chat\node_modules\busboy\lib\main.js:38:33)
+2022-01-03T15:20:22:     at PartStream.<anonymous> (C:\Users\84929\app-chat-api\app-chat\node_modules\busboy\lib\types\multipart.js:213:13)
+2022-01-03T15:20:22:     at PartStream.emit (events.js:400:28)
+2022-01-03T15:20:22:     at HeaderParser.<anonymous> (C:\Users\84929\app-chat-api\app-chat\node_modules\dicer\lib\Dicer.js:51:16)
+2022-01-03T15:20:22:     at HeaderParser.emit (events.js:400:28)
+2022-01-03T15:20:22:     at HeaderParser._finish (C:\Users\84929\app-chat-api\app-chat\node_modules\dicer\lib\HeaderParser.js:68:8)
+2022-01-03T15:20:22:     at SBMH.<anonymous> (C:\Users\84929\app-chat-api\app-chat\node_modules\dicer\lib\HeaderParser.js:40:12)
+2022-01-03T15:42:23: TypeError: res.jon is not a function
+2022-01-03T15:42:23:     at C:\Users\84929\app-chat-api\app-chat\dist\controller\upload.controller.js:34:25
+2022-01-03T15:42:23:     at Generator.next (<anonymous>)
+2022-01-03T15:42:23:     at fulfilled (C:\Users\84929\app-chat-api\app-chat\dist\controller\upload.controller.js:5:58)
+2022-01-03T15:42:23:     at processTicksAndRejections (internal/process/task_queues.js:95:5)

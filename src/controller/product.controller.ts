@@ -28,7 +28,7 @@ class NewController{
     {
        const new_pro= req.body;
        try{
-           product.create({
+          const data = await product.create({
               name:new_pro.name,
               price:new_pro.price,
               seller:new_pro.seller,
@@ -37,10 +37,9 @@ class NewController{
               img:new_pro.img,
               category:new_pro.category
            })
-           res.jon({
-               save:"saved"
-           })
+           res.json({status: 200, data: data})
        }catch(err){
+           res.sendStatus(400)
            console.log(err)
        }
 
