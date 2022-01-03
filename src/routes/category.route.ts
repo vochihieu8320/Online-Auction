@@ -1,12 +1,11 @@
 const express = require('express')
-import productController from '../controller/product.controller';
+import categoryController from '../controller/category.controller';
 
 const router = express.Router();
 
-router.get('/:page',productController.List );
-router.post('/add',productController.Add)
-router.put('/update',productController.Update)
-router.post('/del',productController.Delete)
+router.get('/list',categoryController.List );
+router.post('/add',categoryController.Add)
+router.post('/del',categoryController.Delete)
 /*router.post('/login', userController.Login)
 //User use token to get another token
 router.post('/token', userController.refreshToken)

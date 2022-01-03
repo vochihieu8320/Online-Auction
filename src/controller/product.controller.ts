@@ -3,7 +3,7 @@ import { CompletionTriggerKind } from "typescript";
 const  product = require('../model/product.model');
 const jwt = require('jsonwebtoken');
 
-class NewController{
+class ProductController{
     async List(req: any, res: any,next:any)
     {
         let perPage = 16; // số lượng sản phẩm xuất hiện trên 1 page
@@ -29,18 +29,23 @@ class NewController{
        const new_pro= req.body;
        try{
            product.create({
+              Pro_Id:new_pro.id,  
               name:new_pro.name,
               price:new_pro.price,
               seller:new_pro.seller,
               date_add:new_pro.date_add,
               date_bid:new_pro.datebid,
-              img:new_pro.img,
-              category:new_pro.category
+              buynow_price:new_pro.buynow,
+              category:new_pro.category,
+              descript:new_pro.descipt
            })
            res.jon({
-               save:"saved"
+               save:true
            })
        }catch(err){
+           res.json({
+               save:false
+           })
            console.log(err)
        }
 
@@ -53,7 +58,7 @@ class NewController{
         pro_temp.idproduct=String(pro_temp.idproduct)
         console.log(pro_temp,key)
         try{
-            const prod = await product.findOne({idproduct:pro_temp.idproduct})
+            const prod = await product.findOne({Pro_Id:pro_temp.idproduct})
             if(!prod) {
                 return res.status(404).send("Can not find this product!")
             }
@@ -87,4 +92,4 @@ class NewController{
     }
 }
 
-export default new NewController;
+export default new ProductController;
