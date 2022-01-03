@@ -59,6 +59,7 @@ class NewController
             
             res.sendStatus(200)
         }catch(err){
+            res.json({status:400, error: "name or email is already taken"})
             console.log(err);
         }    
     }
@@ -73,7 +74,7 @@ class NewController
                 if (!user) return res.status(400).send('Email is wrong');
                     //check password
                    
-                    const validPass = userService.comparepass(req.body.password,user.password);
+                    const validPass = await userService.comparepass(req.body.password,user.password);
                     if(!validPass) return res.status(400).send('password is wrong');
                     //create token
                     const token = userService.JWT(user)
@@ -85,6 +86,10 @@ class NewController
                         refreshToken: refreshToken
                     });
                 }
+            else
+            {
+                res.sendStatus(400)
+            }
     }
 
     async check_forgot_pwd(req: any, res: any)

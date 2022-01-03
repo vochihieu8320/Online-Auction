@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const host_db :string = process.env.db || "mongodb+srv://1803:1803@cluster0.dwvix.mongodb.net/Auction";
+const host_db :string = process.env.db || "mongodb://localhost:27017/AppChat";
 
 
 async function connect(){

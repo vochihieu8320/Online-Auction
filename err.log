@@ -1,0 +1,15 @@
+2021-12-31T15:09:36: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2021-12-31T15:09:36:     at Timeout.<anonymous> (C:\Users\84929\app-chat-api\app-chat\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:149:23)
+2021-12-31T15:09:36:     at listOnTimeout (internal/timers.js:557:17)
+2021-12-31T15:09:36:     at processTimers (internal/timers.js:500:7)
+2021-12-31T19:02:19: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+2021-12-31T19:02:19:     at ServerResponse.setHeader (_http_outgoing.js:561:11)
+2021-12-31T19:02:19:     at ServerResponse.header (C:\Users\84929\app-chat-api\app-chat\node_modules\express\lib\response.js:771:10)
+2021-12-31T19:02:19:     at ServerResponse.contentType (C:\Users\84929\app-chat-api\app-chat\node_modules\express\lib\response.js:599:15)
+2021-12-31T19:02:19:     at ServerResponse.sendStatus (C:\Users\84929\app-chat-api\app-chat\node_modules\express\lib\response.js:357:8)
+2021-12-31T19:02:19:     at C:\Users\84929\app-chat-api\app-chat\dist\controller\aution.controller.js:29:21
+2021-12-31T19:02:19:     at Generator.next (<anonymous>)
+2021-12-31T19:02:19:     at fulfilled (C:\Users\84929\app-chat-api\app-chat\dist\controller\aution.controller.js:5:58)
+2021-12-31T19:02:19:     at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+2021-12-31T19:02:19:   code: 'ERR_HTTP_HEADERS_SENT'
+2021-12-31T19:02:19: }
