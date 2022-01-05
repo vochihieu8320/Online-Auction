@@ -4,3 +4,102 @@
 2021-12-08T23:22:34: connect to mongoDB
 2021-12-08T23:24:47: Server listen at 3000
 2021-12-08T23:24:48: connect to mongoDB
+2022-01-05T00:01:18: Server listen at 3000
+2022-01-05T00:01:19: connect to mongoDB
+2022-01-05T00:06:13: Server listen at 3000
+2022-01-05T00:06:13: connect to mongoDB
+2022-01-05T00:07:56: Server listen at 3000
+2022-01-05T00:07:57: connect to mongoDB
+2022-01-05T00:10:48: Server listen at 3000
+2022-01-05T00:10:49: connect to mongoDB
+2022-01-05T00:12:31: Server listen at 3000
+2022-01-05T00:12:32: connect to mongoDB
+2022-01-05T00:13:52: Server listen at 3000
+2022-01-05T00:13:53: connect to mongoDB
+2022-01-05T00:15:55: Server listen at 3000
+2022-01-05T00:15:56: connect to mongoDB
+2022-01-05T00:16:50: Server listen at 3000
+2022-01-05T00:16:51: connect to mongoDB
+2022-01-05T00:18:36: Server listen at 3000
+2022-01-05T00:18:36: connect to mongoDB
+2022-01-05T00:18:41: Error: Arguments must be aggregate pipeline operators
+2022-01-05T00:18:41:     at Aggregate.append (E:\WNC-BE\node_modules\mongoose\lib\aggregate.js:145:11)
+2022-01-05T00:18:41:     at new Aggregate (E:\WNC-BE\node_modules\mongoose\lib\aggregate.js:58:17)
+2022-01-05T00:18:41:     at Function.aggregate (E:\WNC-BE\node_modules\mongoose\lib\model.js:4162:21)
+2022-01-05T00:18:41:     at E:\WNC-BE\dist\controller\category.controller.js:17:45
+2022-01-05T00:18:41:     at Generator.next (<anonymous>)
+2022-01-05T00:18:41:     at E:\WNC-BE\dist\controller\category.controller.js:8:71
+2022-01-05T00:18:41:     at new Promise (<anonymous>)
+2022-01-05T00:18:41:     at __awaiter (E:\WNC-BE\dist\controller\category.controller.js:4:12)
+2022-01-05T00:18:41:     at List (E:\WNC-BE\dist\controller\category.controller.js:15:16)
+2022-01-05T00:18:41:     at Layer.handle [as handle_request] (E:\WNC-BE\node_modules\express\lib\router\layer.js:95:5)
+2022-01-05T00:22:50: Server listen at 3000
+2022-01-05T00:22:50: connect to mongoDB
+2022-01-05T00:22:50: MongoInvalidArgumentError: Method "collection.aggregate()" accepts at most two arguments
+2022-01-05T00:22:50:     at Collection.aggregate (E:\WNC-BE\node_modules\mongodb\lib\collection.js:367:19)
+2022-01-05T00:22:50:     at NativeCollection.<computed> [as aggregate] (E:\WNC-BE\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:200:33)
+2022-01-05T00:22:50:     at NativeCollection.Collection.doQueue (E:\WNC-BE\node_modules\mongoose\lib\collection.js:135:23)
+2022-01-05T00:22:50:     at E:\WNC-BE\node_modules\mongoose\lib\collection.js:82:24
+2022-01-05T00:22:50:     at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2022-01-05T00:22:52: MongoServerError: Invalid $project :: caused by :: Cannot do exclusion on field ParentID in inclusion projection
+2022-01-05T00:22:52:     at MessageStream.messageHandler (E:\WNC-BE\node_modules\mongodb\lib\cmap\connection.js:467:30)
+2022-01-05T00:22:52:     at MessageStream.emit (events.js:315:20)
+2022-01-05T00:22:52:     at processIncomingData (E:\WNC-BE\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+2022-01-05T00:22:52:     at MessageStream._write (E:\WNC-BE\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+2022-01-05T00:22:52:     at writeOrBuffer (_stream_writable.js:352:12)
+2022-01-05T00:22:52:     at MessageStream.Writable.write (_stream_writable.js:303:10)
+2022-01-05T00:22:52:     at TLSSocket.ondata (_stream_readable.js:719:22)
+2022-01-05T00:22:52:     at TLSSocket.emit (events.js:315:20)
+2022-01-05T00:22:52:     at addChunk (_stream_readable.js:309:12)
+2022-01-05T00:22:52:     at readableAddChunk (_stream_readable.js:284:9) {
+2022-01-05T00:22:52:   operationTime: new Timestamp({ t: 1641316972, i: 2 }),
+2022-01-05T00:22:52:   ok: 0,
+2022-01-05T00:22:52:   code: 31254,
+2022-01-05T00:22:52:   codeName: 'Location31254',
+2022-01-05T00:22:52:   '$clusterTime': {
+2022-01-05T00:22:52:     clusterTime: new Timestamp({ t: 1641316972, i: 2 }),
+2022-01-05T00:22:52:     signature: {
+2022-01-05T00:22:52:       hash: new Binary(Buffer.from("aacc80bab54607ec3f215fb852500da2b74ef45c", "hex"), 0),
+2022-01-05T00:22:52:       keyId: new Long("7010451680177160199")
+2022-01-05T00:22:52:     }
+2022-01-05T00:22:52:   }
+2022-01-05T00:22:52: }
+2022-01-05T00:24:10: Server listen at 3000
+2022-01-05T00:24:10: connect to mongoDB
+2022-01-05T00:25:15: Server listen at 3000
+2022-01-05T00:25:16: connect to mongoDB
+2022-01-05T00:26:46: Server listen at 3000
+2022-01-05T00:26:46: connect to mongoDB
+2022-01-05T00:26:47: MongoServerError: Invalid $project :: caused by :: Cannot do exclusion on field ParentID in inclusion projection
+2022-01-05T00:26:47:     at MessageStream.messageHandler (E:\WNC-BE\node_modules\mongodb\lib\cmap\connection.js:467:30)
+2022-01-05T00:26:47:     at MessageStream.emit (events.js:315:20)
+2022-01-05T00:26:47:     at processIncomingData (E:\WNC-BE\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+2022-01-05T00:26:47:     at MessageStream._write (E:\WNC-BE\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+2022-01-05T00:26:47:     at writeOrBuffer (_stream_writable.js:352:12)
+2022-01-05T00:26:47:     at MessageStream.Writable.write (_stream_writable.js:303:10)
+2022-01-05T00:26:47:     at TLSSocket.ondata (_stream_readable.js:719:22)
+2022-01-05T00:26:47:     at TLSSocket.emit (events.js:315:20)
+2022-01-05T00:26:47:     at addChunk (_stream_readable.js:309:12)
+2022-01-05T00:26:47:     at readableAddChunk (_stream_readable.js:284:9) {
+2022-01-05T00:26:47:   operationTime: new Timestamp({ t: 1641317208, i: 1 }),
+2022-01-05T00:26:47:   ok: 0,
+2022-01-05T00:26:47:   code: 31254,
+2022-01-05T00:26:47:   codeName: 'Location31254',
+2022-01-05T00:26:47:   '$clusterTime': {
+2022-01-05T00:26:47:     clusterTime: new Timestamp({ t: 1641317208, i: 1 }),
+2022-01-05T00:26:47:     signature: {
+2022-01-05T00:26:47:       hash: new Binary(Buffer.from("dcd4e3726d3d0228fbd2475b4a960ff429159067", "hex"), 0),
+2022-01-05T00:26:47:       keyId: new Long("7010451680177160199")
+2022-01-05T00:26:47:     }
+2022-01-05T00:26:47:   }
+2022-01-05T00:26:47: }
+2022-01-05T00:27:45: Server listen at 3000
+2022-01-05T00:27:45: connect to mongoDB
+2022-01-05T00:27:45: MongoInvalidArgumentError: Method "collection.aggregate()" accepts at most two arguments
+2022-01-05T00:27:45:     at Collection.aggregate (E:\WNC-BE\node_modules\mongodb\lib\collection.js:367:19)
+2022-01-05T00:27:45:     at NativeCollection.<computed> [as aggregate] (E:\WNC-BE\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:200:33)
+2022-01-05T00:27:45:     at NativeCollection.Collection.doQueue (E:\WNC-BE\node_modules\mongoose\lib\collection.js:135:23)
+2022-01-05T00:27:45:     at E:\WNC-BE\node_modules\mongoose\lib\collection.js:82:24
+2022-01-05T00:27:45:     at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2022-01-05T19:59:58: Server listen at 3000
+2022-01-05T19:59:58: connect to mongoDB

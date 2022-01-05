@@ -4,8 +4,8 @@ import categoryController from '../controller/category.controller';
 const router = express.Router();
 
 router.get('/list',categoryController.List );
-router.post('/add',categoryController.Add)
-router.post('/del',categoryController.Delete)
+router.post('/',categoryController.Add)
+router.delete('/:id',categoryController.Delete)
 /*router.post('/login', userController.Login)
 //User use token to get another token
 router.post('/token', userController.refreshToken)

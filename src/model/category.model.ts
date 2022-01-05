@@ -3,12 +3,6 @@ import mongoose from 'mongoose';
 
 var Category = new mongoose.Schema(
     {
-        cate_id:{
-            type: String,
-            required: true,
-            minlength:3,
-            maxlength:50, 
-        },
         name: 
         {
             type: String,
@@ -16,7 +10,7 @@ var Category = new mongoose.Schema(
             minlength:3,
             maxlength:50,
         },
-        parentID:{
+        ParentID:{
             type: String,
             required: true,
             minlength:3,
