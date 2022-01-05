@@ -37,15 +37,23 @@ var Product = new mongoose.Schema(
         category:
         {
             type: String,
-            required: false,
+            required: true,
             minlength: 0
         },
         img:
         {
             type: String,
-            required: false,
-            minlength: 0
+            required: true,
         },
+        img_sub:
+        {
+            type: String,
+            required: false,
+        },
+        description: 
+        {
+            type: String
+        }
     },
     { timestamps: true,collection:'Product'}
 )

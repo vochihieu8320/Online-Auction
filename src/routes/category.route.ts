@@ -1,5 +1,4 @@
 const express = require('express');
-import route from '.';
 import CategoryController from '../controller/category.controller';
 import CategoryService from '../service/category.service';
 const router = express.Router();

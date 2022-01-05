@@ -1,5 +1,4 @@
 import Category from '../model/category.model';
-import CategoryService from '../service/category.service';
 
 class CategoryController{
     async create(req: any, res: any){

@@ -25,6 +25,7 @@
     "multer-s3": "^2.10.0",
     "nodemon": "^2.0.12",
     "socket.io": "^4.2.0",
+    "swagger-ui-express": "^4.3.0",
     "ts-node": "^10.2.1"
   },
   "devDependencies": {

@@ -659,3 +659,683 @@
 2022-01-03T17:49:36: connect to mongoDB
 2022-01-03T17:51:36: Server listen at 3000
 2022-01-03T17:51:36: connect to mongoDB
+2022-01-05T20:40:15: Server listen at 3000
+2022-01-05T20:40:15: connect to mongoDB
+2022-01-05T20:40:50: Server listen at 3000
+2022-01-05T20:40:50: connect to mongoDB
+2022-01-05T20:42:25: Server listen at 3000
+2022-01-05T20:42:25: connect to mongoDB
+2022-01-05T20:43:45: Server listen at 3000
+2022-01-05T20:43:45: connect to mongoDB
+2022-01-05T20:47:32: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:32: Require stack:
+2022-01-05T20:47:32: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:32: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:32: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:32:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:32:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:32:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:32:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:32:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:32:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:32:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:32:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:32:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:32:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:32:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:32:   requireStack: [
+2022-01-05T20:47:32:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:32:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:32:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:32:   ]
+2022-01-05T20:47:32: }
+2022-01-05T20:47:33: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:33: Require stack:
+2022-01-05T20:47:33: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:33: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:33: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:33:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:33:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:33:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:33:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:33:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:33:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:33:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:33:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:33:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:33:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:33:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:33:   requireStack: [
+2022-01-05T20:47:33:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:33:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:33:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:33:   ]
+2022-01-05T20:47:33: }
+2022-01-05T20:47:34: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:34: Require stack:
+2022-01-05T20:47:34: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:34: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:34: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:34:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:34:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:34:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:34:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:34:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:34:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:34:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:34:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:34:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:34:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:34:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:34:   requireStack: [
+2022-01-05T20:47:34:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:34:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:34:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:34:   ]
+2022-01-05T20:47:34: }
+2022-01-05T20:47:36: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:36: Require stack:
+2022-01-05T20:47:36: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:36: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:36: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:36:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:36:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:36:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:36:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:36:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:36:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:36:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:36:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:36:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:36:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:36:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:36:   requireStack: [
+2022-01-05T20:47:36:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:36:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:36:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:36:   ]
+2022-01-05T20:47:36: }
+2022-01-05T20:47:37: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:37: Require stack:
+2022-01-05T20:47:37: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:37: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:37: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:37:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:37:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:37:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:37:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:37:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:37:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:37:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:37:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:37:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:37:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:37:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:37:   requireStack: [
+2022-01-05T20:47:37:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:37:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:37:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:37:   ]
+2022-01-05T20:47:37: }
+2022-01-05T20:47:38: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:38: Require stack:
+2022-01-05T20:47:38: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:38: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:38: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:38:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:38:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:38:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:38:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:38:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:38:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:38:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:38:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:38:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:38:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:38:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:38:   requireStack: [
+2022-01-05T20:47:38:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:38:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:38:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:38:   ]
+2022-01-05T20:47:38: }
+2022-01-05T20:47:40: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:40: Require stack:
+2022-01-05T20:47:40: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:40: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:40: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:40:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:40:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:40:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:40:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:40:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:40:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:40:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:40:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:40:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:40:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:40:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:40:   requireStack: [
+2022-01-05T20:47:40:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:40:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:40:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:40:   ]
+2022-01-05T20:47:40: }
+2022-01-05T20:47:41: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:41: Require stack:
+2022-01-05T20:47:41: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:41: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:41: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:41:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:41:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:41:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:41:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:41:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:41:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:41:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:41:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:41:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:41:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:41:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:41:   requireStack: [
+2022-01-05T20:47:41:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:41:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:41:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:41:   ]
+2022-01-05T20:47:41: }
+2022-01-05T20:47:43: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:43: Require stack:
+2022-01-05T20:47:43: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:43: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:43: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:43:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:43:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:43:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:43:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:43:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:43:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:43:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:43:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:43:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:43:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:43:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:43:   requireStack: [
+2022-01-05T20:47:43:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:43:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:43:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:43:   ]
+2022-01-05T20:47:43: }
+2022-01-05T20:47:44: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:44: Require stack:
+2022-01-05T20:47:44: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:44: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:44: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:44:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:44:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:44:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:44:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:44:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:44:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:44:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:44:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:44:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:44:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:44:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:44:   requireStack: [
+2022-01-05T20:47:44:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:44:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:44:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:44:   ]
+2022-01-05T20:47:44: }
+2022-01-05T20:47:46: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:46: Require stack:
+2022-01-05T20:47:46: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:46: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:46: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:46:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:46:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:46:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:46:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:46:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:46:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:46:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:46:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:46:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:46:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:46:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:46:   requireStack: [
+2022-01-05T20:47:46:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:46:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:46:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:46:   ]
+2022-01-05T20:47:46: }
+2022-01-05T20:47:47: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:47: Require stack:
+2022-01-05T20:47:47: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:47: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:47: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:47:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:47:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:47:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:47:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:47:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:47:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:47:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:47:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:47:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:47:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:47:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:47:   requireStack: [
+2022-01-05T20:47:47:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:47:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:47:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:47:   ]
+2022-01-05T20:47:47: }
+2022-01-05T20:47:49: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:49: Require stack:
+2022-01-05T20:47:49: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:49: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:49: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:49:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:49:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:49:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:49:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:49:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:49:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:49:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:49:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:49:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:49:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:49:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:49:   requireStack: [
+2022-01-05T20:47:49:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:49:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:49:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:49:   ]
+2022-01-05T20:47:49: }
+2022-01-05T20:47:50: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:50: Require stack:
+2022-01-05T20:47:50: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:50: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:50: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:50:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:50:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:50:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:50:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:50:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:50:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:50:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:50:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:50:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:50:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:50:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:50:   requireStack: [
+2022-01-05T20:47:50:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:50:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:50:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:50:   ]
+2022-01-05T20:47:50: }
+2022-01-05T20:47:51: Error: Cannot find module 'swagger.json'
+2022-01-05T20:47:51: Require stack:
+2022-01-05T20:47:51: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:47:51: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:47:51: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:47:51:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:47:51:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:47:51:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:47:51:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:47:51:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:47:51:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:47:51:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:47:51:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:47:51:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:47:51:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:47:51:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:47:51:   requireStack: [
+2022-01-05T20:47:51:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:47:51:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:47:51:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:47:51:   ]
+2022-01-05T20:47:51: }
+2022-01-05T20:49:20: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:20: Require stack:
+2022-01-05T20:49:20: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:20: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:20: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:20:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:20:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:20:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:20:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:20:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:20:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:20:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:20:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:20:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:20:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:20:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:20:   requireStack: [
+2022-01-05T20:49:20:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:20:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:20:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:20:   ]
+2022-01-05T20:49:20: }
+2022-01-05T20:49:21: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:21: Require stack:
+2022-01-05T20:49:21: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:21: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:21: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:21:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:21:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:21:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:21:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:21:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:21:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:21:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:21:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:21:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:21:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:21:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:21:   requireStack: [
+2022-01-05T20:49:21:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:21:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:21:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:21:   ]
+2022-01-05T20:49:21: }
+2022-01-05T20:49:23: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:23: Require stack:
+2022-01-05T20:49:23: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:23: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:23: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:23:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:23:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:23:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:23:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:23:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:23:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:23:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:23:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:23:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:23:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:23:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:23:   requireStack: [
+2022-01-05T20:49:23:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:23:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:23:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:23:   ]
+2022-01-05T20:49:23: }
+2022-01-05T20:49:24: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:24: Require stack:
+2022-01-05T20:49:24: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:24: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:24: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:24:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:24:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:24:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:24:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:24:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:24:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:24:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:24:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:24:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:24:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:24:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:24:   requireStack: [
+2022-01-05T20:49:24:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:24:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:24:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:24:   ]
+2022-01-05T20:49:24: }
+2022-01-05T20:49:25: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:25: Require stack:
+2022-01-05T20:49:25: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:25: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:25: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:25:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:25:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:25:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:25:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:25:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:25:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:25:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:25:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:25:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:25:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:25:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:25:   requireStack: [
+2022-01-05T20:49:25:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:25:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:25:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:25:   ]
+2022-01-05T20:49:25: }
+2022-01-05T20:49:27: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:27: Require stack:
+2022-01-05T20:49:27: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:27: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:27: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:27:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:27:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:27:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:27:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:27:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:27:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:27:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:27:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:27:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:27:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:27:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:27:   requireStack: [
+2022-01-05T20:49:27:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:27:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:27:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:27:   ]
+2022-01-05T20:49:27: }
+2022-01-05T20:49:28: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:28: Require stack:
+2022-01-05T20:49:28: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:28: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:28: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:28:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:28:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:28:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:28:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:28:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:28:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:28:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:28:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:28:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:28:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:28:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:28:   requireStack: [
+2022-01-05T20:49:28:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:28:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:28:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:28:   ]
+2022-01-05T20:49:28: }
+2022-01-05T20:49:29: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:29: Require stack:
+2022-01-05T20:49:29: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:29: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:29: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:29:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:29:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:29:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:29:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:29:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:29:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:29:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:29:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:29:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:29:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:29:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:29:   requireStack: [
+2022-01-05T20:49:29:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:29:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:29:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:29:   ]
+2022-01-05T20:49:29: }
+2022-01-05T20:49:31: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:31: Require stack:
+2022-01-05T20:49:31: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:31: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:31: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:31:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:31:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:31:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:31:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:31:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:31:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:31:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:31:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:31:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:31:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:31:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:31:   requireStack: [
+2022-01-05T20:49:31:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:31:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:31:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:31:   ]
+2022-01-05T20:49:31: }
+2022-01-05T20:49:32: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:32: Require stack:
+2022-01-05T20:49:32: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:32: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:32: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:32:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:32:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:32:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:32:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:32:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:32:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:32:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:32:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:32:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:32:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:32:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:32:   requireStack: [
+2022-01-05T20:49:32:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:32:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:32:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:32:   ]
+2022-01-05T20:49:32: }
+2022-01-05T20:49:34: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:34: Require stack:
+2022-01-05T20:49:34: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:34: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:34: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:34:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:34:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:34:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:34:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:34:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:34:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:34:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:34:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:34:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:34:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:34:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:34:   requireStack: [
+2022-01-05T20:49:34:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:34:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:34:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:34:   ]
+2022-01-05T20:49:34: }
+2022-01-05T20:49:35: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:35: Require stack:
+2022-01-05T20:49:35: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:35: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:35: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:35:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:35:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:35:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:35:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:35:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:35:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:35:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:35:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:35:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:35:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:35:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:35:   requireStack: [
+2022-01-05T20:49:35:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:35:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:35:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:35:   ]
+2022-01-05T20:49:35: }
+2022-01-05T20:49:37: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:37: Require stack:
+2022-01-05T20:49:37: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:37: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:37: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:37:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:37:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:37:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:37:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:37:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:37:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:37:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:37:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:37:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:37:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:37:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:37:   requireStack: [
+2022-01-05T20:49:37:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:37:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:37:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:37:   ]
+2022-01-05T20:49:37: }
+2022-01-05T20:49:38: Error: Cannot find module './../swagger.json'
+2022-01-05T20:49:38: Require stack:
+2022-01-05T20:49:38: - C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js
+2022-01-05T20:49:38: - C:\Users\84929\app-chat-api\app-chat\dist\routes\index.js
+2022-01-05T20:49:38: - C:\Users\84929\app-chat-api\app-chat\dist\app.js
+2022-01-05T20:49:38:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+2022-01-05T20:49:38:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+2022-01-05T20:49:38:     at require (internal/modules/cjs/helpers.js:92:18)
+2022-01-05T20:49:38:     at Object.<anonymous> (C:\Users\84929\app-chat-api\app-chat\dist\routes\swagger.route.js:5:25)
+2022-01-05T20:49:38:     at Module._compile (internal/modules/cjs/loader.js:1072:14)
+2022-01-05T20:49:38:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-01-05T20:49:38:     at Module.load (internal/modules/cjs/loader.js:937:32)
+2022-01-05T20:49:38:     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+2022-01-05T20:49:38:     at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-01-05T20:49:38:     at Module.Hook._require.Module.require (C:\Users\84929\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+2022-01-05T20:49:38:   code: 'MODULE_NOT_FOUND',
+2022-01-05T20:49:38:   requireStack: [
+2022-01-05T20:49:38:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\swagger.route.js',
+2022-01-05T20:49:38:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\routes\\index.js',
+2022-01-05T20:49:38:     'C:\\Users\\84929\\app-chat-api\\app-chat\\dist\\app.js'
+2022-01-05T20:49:38:   ]
+2022-01-05T20:49:38: }
+2022-01-05T20:52:44: Server listen at 3000
+2022-01-05T20:52:44: connect to mongoDB
+2022-01-05T20:53:40: Server listen at 3000
+2022-01-05T20:53:40: connect to mongoDB
+2022-01-05T20:54:57: Server listen at 3000
+2022-01-05T20:54:57: connect to mongoDB
+2022-01-05T20:56:09: Server listen at 3000
+2022-01-05T20:56:09: connect to mongoDB
+2022-01-05T20:57:01: Server listen at 3000
+2022-01-05T20:57:01: connect to mongoDB
+2022-01-05T20:58:06: Server listen at 3000
+2022-01-05T20:58:06: connect to mongoDB
+2022-01-05T21:18:14: Server listen at 3000
+2022-01-05T21:18:14: connect to mongoDB
+2022-01-05T21:42:39: Server listen at 3000
+2022-01-05T21:42:39: connect to mongoDB
+2022-01-05T21:43:46: Server listen at 3000
+2022-01-05T21:43:46: connect to mongoDB
+2022-01-05T21:44:39: Server listen at 3000
+2022-01-05T21:44:39: connect to mongoDB
+2022-01-05T21:49:21: Server listen at 3000
+2022-01-05T21:49:21: connect to mongoDB
+2022-01-05T21:54:12: Server listen at 3000
+2022-01-05T21:54:12: connect to mongoDB
+2022-01-05T21:56:10: Server listen at 3000
+2022-01-05T21:56:10: connect to mongoDB
+2022-01-05T21:57:24: Server listen at 3000
+2022-01-05T21:57:24: connect to mongoDB
+2022-01-05T21:58:36: Server listen at 3000
+2022-01-05T21:58:36: connect to mongoDB
+2022-01-05T22:00:48: Server listen at 3000
+2022-01-05T22:00:48: connect to mongoDB
+2022-01-05T22:02:19: Server listen at 3000
+2022-01-05T22:02:19: connect to mongoDB

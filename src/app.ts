@@ -3,7 +3,6 @@ const express = require('express');
 import db from './db/db'
 import route from './routes/index'
 
-
 const cors = require("cors");
 const app = express();
 app.use(
