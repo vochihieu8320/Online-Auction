@@ -1,11 +1,11 @@
 const express = require('express')
-import categoryController from '../controller/manageuser.controller';
+import categoryController from '../../controller/admin/manageuser.controller';
 
 const router = express.Router();
 
-router.get('/list',categoryController.List);
-router.post('/',categoryController.Register)
-router.delete('/:id',categoryController.Delete)
+router.get('/user/list',categoryController.List);
+router.post('/user',categoryController.Register)
+router.delete('/user/:id',categoryController.Delete)
 /*router.post('/login', userController.Login)
 //User use token to get another token
 router.post('/token', userController.refreshToken)

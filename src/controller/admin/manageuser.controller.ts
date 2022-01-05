@@ -1,5 +1,5 @@
-import userService from '../service/user.service'
-import User from '../model/user.model';
+import userService from '../../service/user.service'
+import User from '../../model/user.model';
 
 
 class ManageController
