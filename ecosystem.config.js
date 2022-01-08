@@ -3,7 +3,6 @@ module.exports = {
     name: "WNC",
     script: "dist/app.js",
     env: {
-      PORT: 3000,
       NODE_ENV: "development",
       db : "mongodb://localhost:27017/AppChat",
       JWT_TOKEN_SECRET: "vch@11111111iiiiiiiii",
