@@ -47,8 +47,6 @@ class NewController
     async Register(req: any, res: any)
     {
         try{
-            // const { error } = validate.regisValidate(req.body);
-            // if (error)  return res.status(400).send(error.details[0].message);
             const hashed = await userService.hashpass(req.body.password);
             await User.create({
                 name: req.body.name,
@@ -125,7 +123,7 @@ class NewController
         const {email, refreshToken} = req.body;
         //check refreshToken is valid or not
         try {
-            const user =<any>User.findOne({email: email});
+            const user =<any> await User.findOne({email: email});
             if(user.refreshToken === refreshToken)
             {
                 const new_refresh_token = userService.refreshToken(user);

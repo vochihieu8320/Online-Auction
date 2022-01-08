@@ -31,7 +31,7 @@ async function comparepass(password:string, hasspass: string):Promise<boolean>{
             email: user.email
         },
         token_secret,
-        { expiresIn: '1h' }
+        { expiresIn: '2h' }
     )
     return token
 }

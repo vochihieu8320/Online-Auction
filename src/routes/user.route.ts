@@ -11,5 +11,6 @@ router.post('/token', userController.refreshToken)
 router.post('/forgot-pwd', userController.forgot_pwd)
 router.patch('/forgot-pwd', userController.check_forgot_pwd)
 router.post('/change-pwd', userController.changePwd)
+router.post('/refreshToken', userController.refreshToken)
 export default router;
 

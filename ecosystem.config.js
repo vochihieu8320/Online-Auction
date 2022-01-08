@@ -8,7 +8,7 @@ module.exports = {
       db : "mongodb://localhost:27017/AppChat",
       JWT_TOKEN_SECRET: "vch@11111111iiiiiiiii",
       Domain_Fe: "http://localhost:4200",
-      email_password: "@Hieu@0909400743",
+      email_password: "ywdkvqdaxlgiqnlq",
       email_name: "chihieu8320@gmail.com",
       google_client_id: "346686068619-mh8i7ab64el9n4i3ueuqgr0bq6e24qsg.apps.googleusercontent.com",
       google_client_secret: "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",

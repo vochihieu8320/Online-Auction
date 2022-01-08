@@ -37,7 +37,7 @@ function JWT(user) {
         id: user.id,
         name: user.name,
         email: user.email
-    }, token_secret, { expiresIn: '1h' });
+    }, token_secret, { expiresIn: '2h' });
     return token;
 }
 function refreshToken(user) {

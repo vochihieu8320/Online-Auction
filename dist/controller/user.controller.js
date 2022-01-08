@@ -57,8 +57,6 @@ class NewController {
     Register(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                // const { error } = validate.regisValidate(req.body);
-                // if (error)  return res.status(400).send(error.details[0].message);
                 const hashed = yield user_service_1.default.hashpass(req.body.password);
                 yield user_model_1.default.create({
                     name: req.body.name,
@@ -131,7 +129,7 @@ class NewController {
             const { email, refreshToken } = req.body;
             //check refreshToken is valid or not
             try {
-                const user = user_model_1.default.findOne({ email: email });
+                const user = yield user_model_1.default.findOne({ email: email });
                 if (user.refreshToken === refreshToken) {
                     const new_refresh_token = user_service_1.default.refreshToken(user);
                     const new_token = user_service_1.default.JWT(user);
