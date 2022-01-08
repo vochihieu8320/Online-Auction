@@ -1,12 +1,12 @@
 {
-  "name": "VCH",
+  "name": "VCH-api",
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npm install pm2 -g",
-    "start:prod": "tsc & pm2-runtime start ecosystem.config.js --env production",
+    "start": "tsc & pm2-runtime start ecosystem.config.js --env production",
     "start:dev": "tsc & pm2 start ecosystem.config.js --env development",
     "build": "tsc -p ."
   },
