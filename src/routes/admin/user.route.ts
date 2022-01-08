@@ -1,13 +1,11 @@
 const express = require('express')
-import productController from '../controller/product.controller';
+import categoryController from '../../controller/admin/manageuser.controller';
 
 const router = express.Router();
 
-router.get('/:page',productController.List );
-router.get('/:id',productController.findById)
-router.post('/',productController.Add)
-router.put('/',productController.Update)
-router.delete('/:id',productController.Delete)
+router.get('/user/list',categoryController.List);
+router.post('/user',categoryController.Register)
+router.delete('/user/:id',categoryController.Delete)
 /*router.post('/login', userController.Login)
 //User use token to get another token
 router.post('/token', userController.refreshToken)

@@ -3,13 +3,23 @@ import { CompletionTriggerKind } from "typescript";
 const  product = require('../model/product.model');
 const jwt = require('jsonwebtoken');
 
-class NewController{
+class ProductController{
+    async findById(req:any,res:any,next:any){
+        let id=req.params.id;
+        try{
+            res.json({
+                product: product.findOne({_id:id})
+            })
+        }catch(err){
+            console.log(err)
+        }
+    }
     async List(req: any, res: any,next:any)
     {
         let perPage = 16; // số lượng sản phẩm xuất hiện trên 1 page
         let page = req.params.page || 1; 
         try{
-            product
+            await product
             .find() // find tất cả các data
             .skip((perPage * page) - perPage) // Trong page đầu tiên sẽ bỏ qua giá trị là 0
             .limit(perPage)
@@ -34,8 +44,9 @@ class NewController{
               seller:new_pro.seller,
               date_add:new_pro.date_add,
               date_bid:new_pro.datebid,
-              img:new_pro.img,
-              category:new_pro.category
+              buynow_price:new_pro.buynow,
+              category:new_pro.category,
+              descript:new_pro.descipt
            })
            res.json({status: 200, data: data})
        }catch(err){
@@ -52,7 +63,7 @@ class NewController{
         pro_temp.idproduct=String(pro_temp.idproduct)
         console.log(pro_temp,key)
         try{
-            const prod = await product.findOne({idproduct:pro_temp.idproduct})
+            const prod = await product.findOne({Pro_Id:pro_temp.idproduct})
             if(!prod) {
                 return res.status(404).send("Can not find this product!")
             }
@@ -71,7 +82,7 @@ class NewController{
     }
     async Delete(req: any, res: any)
     {
-        let _id = req.body.id;
+        let _id = req.params.id;
         try{
             await product.findOneAndDelete({_id:_id})
             res.json({
@@ -86,4 +97,4 @@ class NewController{
     }
 }
 
-export default new NewController;
+export default new ProductController;

@@ -3,6 +3,13 @@ import mongoose from 'mongoose';
 
 var Product = new mongoose.Schema(
     {
+        Pro_Id: 
+        {
+            type: String,
+            required: true,
+            minlength:3,
+            maxlength:50,
+        },
         name: 
         {
             type: String,
@@ -15,7 +22,7 @@ var Product = new mongoose.Schema(
             type: String,
             minlength: 8,
         },
-        Price: 
+        Real_price: 
         {
             type: String,
             required: false,
@@ -40,12 +47,24 @@ var Product = new mongoose.Schema(
             required: false,
             minlength: 0
         },
-        img:
+        buynow_price:
         {
             type: String,
             required: false,
             minlength: 0
         },
+        descipt:[{
+            status:{
+                type: String,
+                required: false,
+                minlength: 0
+            },
+            date_buy:{
+                type: String,
+                required: false,
+                minlength: 0
+            },
+        }]
     },
     { timestamps: true,collection:'Product'}
 )
