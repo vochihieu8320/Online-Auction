@@ -134,7 +134,7 @@ class NewController {
                 const token = user_service_1.default.JWT(user);
                 const refreshToken = user_service_1.default.refreshToken(user);
                 //update fresh token
-                yield user_model_1.default.updateOne({ email: user.email, refreshToken: refreshToken });
+                yield user_model_1.default.updateOne({ email: user.email }, { refreshToken: refreshToken });
                 res.json({
                     token: token,
                     refreshToken: refreshToken
@@ -147,12 +147,13 @@ class NewController {
     }
     check_forgot_pwd(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { email, regCode } = req.body;
+            const { email, regCode, password } = req.body;
             try {
                 const user = yield user_model_1.default.findOne({ email: email });
                 if (user) {
                     if (yield user_service_1.default.comparepass(regCode, user.reset_digest)) {
-                        yield user_model_1.default.updateOne({ email: email }, { reset_digest: "" });
+                        const hashed = yield user_service_1.default.hashpass(password);
+                        yield user_model_1.default.updateOne({ email: email }, { reset_digest: "", password: hashed });
                         res.sendStatus(200);
                     }
                     else {
@@ -209,6 +210,20 @@ class NewController {
             }
             else {
                 res.json({ status: 400, error: "New Password confirm dont match" });
+            }
+        });
+    }
+    updatePassword(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { email, password } = req.body;
+            const hashed = yield user_service_1.default.hashpass(password);
+            try {
+                yield user_model_1.default.findOneAndUpdate({ email: email }, { password: hashed });
+                res.sendStatus(200);
+            }
+            catch (error) {
+                console.log(error);
+                res.sendStatus(400);
             }
         });
     }

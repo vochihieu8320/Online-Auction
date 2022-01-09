@@ -5,7 +5,8 @@ import authenticationService from '../service/authentication.service';
 const router = express.Router();
 
 // router.get('/:page', authenticationService.authentication, productController.List );
-router.get('/:id', authenticationService.authentication, productController.findById)
+router.get('/', authenticationService.authentication, productController.List);
+router.get('/:productID', authenticationService.authentication, productController.show);
 router.post('/', authenticationService.authentication, 
                  authenticationService.is_Seller_Admin,
                 productController.Add)
