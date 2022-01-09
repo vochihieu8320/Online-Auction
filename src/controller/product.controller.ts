@@ -1,8 +1,6 @@
-import { CompletionTriggerKind } from "typescript";
-
 const  product = require('../model/product.model');
-const jwt = require('jsonwebtoken');
-
+import Product from '../model/product.model';
+import ProductService from "../service/product.service";
 class ProductController{
     async findById(req:any,res:any,next:any){
         let id=req.params.id;
@@ -36,48 +34,36 @@ class ProductController{
 
     async Add (req: any, res: any)
     {
-       const new_pro= req.body;
        try{
-          const data = await product.create({
-              name:new_pro.name,
-              price:new_pro.price,
-              seller:new_pro.seller,
-              date_add:new_pro.date_add,
-              date_bid:new_pro.datebid,
-              buynow_price:new_pro.buynow,
-              category:new_pro.category,
-              descript:new_pro.descipt
-           })
-           res.json({status: 200, data: data})
+           if(await ProductService.checkCategory(req.body.categoryID)){
+                const data = await Product.create(req.body)
+                res.json({status: 200, data: data})
+           }
+           else
+           {
+            res.sendStatus({status: 400, error: "invalid category"})               
+           }
+          
        }catch(err){
            res.sendStatus(400)
-           console.log(err)
        }
 
     }
     async Update(req: any, res: any)
     {
-        const pro_temp=req.body;
-        console.log(pro_temp);
-        const key = Object.keys(pro_temp)
-        pro_temp.idproduct=String(pro_temp.idproduct)
-        console.log(pro_temp,key)
-        try{
-            const prod = await product.findOne({Pro_Id:pro_temp.idproduct})
-            if(!prod) {
-                return res.status(404).send("Can not find this product!")
+        try {
+            const data = await product.findByIdAndUpdate(req.params.productID, req.body, { returnOriginal: false });
+            if(data){
+                res.json({status: 200, data: data});     
             }
-            key.forEach((update) => prod[update]=pro_temp[update])
-            await prod.save();
-            res.json({
-                save:true
-            })
-        }catch(error){
-                console.log(error);
-                res.json({
-                    save:false
-                })
-            }   
+            else{
+                res.json({status: 400, error:"invalid category"})
+            }
+        
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
+        }
     
     }
     async Delete(req: any, res: any)

@@ -18,6 +18,7 @@ const user_model_1 = __importDefault(require("../model/user.model"));
 const mailer_1 = __importDefault(require("../mailer/mailer"));
 const template_1 = __importDefault(require("../email_template/template"));
 const Validation_service_1 = __importDefault(require("../service/Validation.service"));
+const otp_1 = __importDefault(require("../email_template/otp"));
 class NewController {
     forgot_pwd(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -69,6 +70,54 @@ class NewController {
             catch (err) {
                 res.json({ status: 400, error: "name or email is already taken" });
                 console.log(err);
+            }
+        });
+    }
+    getOtp(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const user = yield user_model_1.default.findOne({ email: req.body.email });
+                if (user) {
+                    const regCode = user_service_1.default.generateRegCode();
+                    const form = {
+                        name: user.name,
+                        otp: regCode
+                    };
+                    //create template
+                    const template = otp_1.default.otp_template(form);
+                    const mail_options = mail_service_1.default.mail_options(user.email, template, "Active Account");
+                    const transporter = mailer_1.default.connect();
+                    //send mail
+                    mail_service_1.default.send_mail(transporter, mail_options);
+                    //luu db
+                    yield user_model_1.default.findOneAndUpdate({ email: user.email }, { otp: regCode });
+                    res.sendStatus(200);
+                }
+            }
+            catch (error) {
+                console.log(error);
+                res.sendStatus(400);
+            }
+        });
+    }
+    checkotp(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                try {
+                    const user = yield user_model_1.default.findOne({ email: req.body.email, otp: req.body.otp });
+                    if (user) {
+                        yield user_model_1.default.updateOne({ email: req.body.email }, { otp: "" });
+                    }
+                    else {
+                        res.sendStatus(400);
+                    }
+                }
+                catch (error) {
+                    console.log(error);
+                    res.sendStatus(500);
+                }
+            }
+            catch (error) {
             }
         });
     }

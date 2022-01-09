@@ -4,7 +4,7 @@ import User from '../model/user.model';
 import mail from "../mailer/mailer";
 import template from "../email_template/template"
 import validate from '../service/Validation.service';
-
+import otp_template from '../email_template/otp'
 class NewController
 {
    
@@ -54,7 +54,6 @@ class NewController
                 password: hashed,
                 user_type: req.body.user_type
             })
-            
             res.sendStatus(200)
         }catch(err){
             res.json({status:400, error: "name or email is already taken"})
@@ -62,6 +61,53 @@ class NewController
         }    
     }
     
+    async getOtp(req: any, res: any){
+        try {
+            const user =<any> await User.findOne({email: req.body.email});
+            if(user){
+                const regCode = userService.generateRegCode();
+    
+                const form = {
+                    name : user.name,
+                    otp: regCode
+                }
+                //create template
+                const template = <any> otp_template.otp_template(form);
+                const mail_options = mailService.mail_options(user.email, template, "Active Account");
+                const transporter = mail.connect()
+                //send mail
+                mailService.send_mail(transporter, mail_options);
+                //luu db
+                await User.findOneAndUpdate({email: user.email}, {otp: regCode});
+                res.sendStatus(200)
+            }
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(400)
+        }
+       
+    }
+
+    async checkotp(req: any, res: any) {
+        try {
+            try {
+                const user = await User.findOne({email: req.body.email, otp: req.body.otp});
+                if(user){
+                    await User.updateOne({email: req.body.email}, {otp:""});
+                    res.sendStatus(200);
+                }
+                else {
+                    res.sendStatus(400)
+                }
+            } catch (error) {
+                console.log(error);
+                res.sendStatus(500)
+            }
+        } catch (error) {
+            
+        }
+    }
+
     async Login (req: any, res: any)
     {
         const { error } = validate.loginValidate(req.body);

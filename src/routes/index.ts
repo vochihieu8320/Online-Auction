@@ -4,14 +4,16 @@ import bideRouter from './bide.route';
 import productRouter from './product.route';
 import uploadRouter from './upload.route';
 import manageRouter from './admin/user.route';
+import categoryRouter from './category.route';
 function route(app: any)
 {
     app.use('/users', userRouter);
     app.use('/auctions', auctionRouter);
     app.use('/bides', bideRouter);
-    app.use('/product',productRouter);
+    app.use('/products',productRouter);
     app.use('/uploads', uploadRouter);
-    app.use('/admin',manageRouter)
+    app.use('/admin',manageRouter);
+    app.use('/categories',categoryRouter);
 
 }
 

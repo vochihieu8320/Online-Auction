@@ -36,7 +36,8 @@ function JWT(user) {
     const token = jwt.sign({
         id: user.id,
         name: user.name,
-        email: user.email
+        email: user.email,
+        user_type: user.user_type
     }, token_secret, { expiresIn: '2h' });
     return token;
 }

@@ -9,12 +9,14 @@ const bide_route_1 = __importDefault(require("./bide.route"));
 const product_route_1 = __importDefault(require("./product.route"));
 const upload_route_1 = __importDefault(require("./upload.route"));
 const user_route_2 = __importDefault(require("./admin/user.route"));
+const category_route_1 = __importDefault(require("./category.route"));
 function route(app) {
     app.use('/users', user_route_1.default);
     app.use('/auctions', aution_route_1.default);
     app.use('/bides', bide_route_1.default);
-    app.use('/product', product_route_1.default);
+    app.use('/products', product_route_1.default);
     app.use('/uploads', upload_route_1.default);
     app.use('/admin', user_route_2.default);
+    app.use('/categories', category_route_1.default);
 }
 exports.default = route;

@@ -3,13 +3,6 @@ import mongoose from 'mongoose';
 
 var Product = new mongoose.Schema(
     {
-        Pro_Id: 
-        {
-            type: String,
-            required: true,
-            minlength:3,
-            maxlength:50,
-        },
         name: 
         {
             type: String,
@@ -22,7 +15,7 @@ var Product = new mongoose.Schema(
             type: String,
             minlength: 8,
         },
-        Real_price: 
+        price: 
         {
             type: String,
             required: false,
@@ -41,32 +34,26 @@ var Product = new mongoose.Schema(
             required: false,
             minlength: 0
         },
-        category:
+        categoryID:
         {
             type: String,
             required: false,
             minlength: 0
         },
-        buynow_price:
+        buy_now_price:
         {
             type: String,
             required: false,
             minlength: 0
         },
-        descipt:[{
-            status:{
-                type: String,
-                required: false,
-                minlength: 0
-            },
-            date_buy:{
-                type: String,
-                required: false,
-                minlength: 0
-            },
-        }]
+        description:{
+            type: String,
+        },
+        img: {
+            type: String,
+        }
     },
     { timestamps: true,collection:'Product'}
 )
-
-module.exports = mongoose.model('Product', Product);
+const model = mongoose.model('Product', Product);
+export default model;

@@ -48,6 +48,9 @@ const User = new mongoose_1.default.Schema({
     },
     refreshToken: {
         type: String,
+    },
+    otp: {
+        type: String
     }
 }, { timestamps: true });
 User.index({ email: 1 });
