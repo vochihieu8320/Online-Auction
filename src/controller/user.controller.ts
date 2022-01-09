@@ -61,32 +61,30 @@ class NewController
         }    
     }
     
-    async getOtp(req: any, res: any){
-        try {
-            const user =<any> await User.findOne({email: req.body.email});
-            if(user){
-                const regCode = userService.generateRegCode();
+    // async getOtp(req: any, res: any){
+    //     try {
+    //             const regCode = userService.generateRegCode();
     
-                const form = {
-                    name : user.name,
-                    otp: regCode
-                }
-                //create template
-                const template = <any> otp_template.otp_template(form);
-                const mail_options = mailService.mail_options(user.email, template, "Active Account");
-                const transporter = mail.connect()
-                //send mail
-                mailService.send_mail(transporter, mail_options);
-                //luu db
-                await User.findOneAndUpdate({email: user.email}, {otp: regCode});
-                res.sendStatus(200)
-            }
-        } catch (error) {
-            console.log(error);
-            res.sendStatus(400)
-        }
+    //             const form = {
+    //                 name : user.name,
+    //                 otp: regCode
+    //             }
+    //             //create template
+    //             const template = <any> otp_template.otp_template(form);
+    //             const mail_options = mailService.mail_options(user.email, template, "Active Account");
+    //             const transporter = mail.connect()
+    //             //send mail
+    //             mailService.send_mail(transporter, mail_options);
+    //             //luu db
+    //             await User.findOneAndUpdate({email: user.email}, {otp: regCode});
+    //             res.sendStatus(200)
+    //         }
+    //     } catch (error) {
+    //         console.log(error);
+    //         res.sendStatus(400)
+    //     }
        
-    }
+    // }
 
     async checkotp(req: any, res: any) {
         try {

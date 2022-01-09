@@ -5,6 +5,7 @@ import productRouter from './product.route';
 import uploadRouter from './upload.route';
 import manageRouter from './admin/user.route';
 import categoryRouter from './category.route';
+import otpRouter from './otp.route';
 function route(app: any)
 {
     app.use('/users', userRouter);
@@ -14,6 +15,7 @@ function route(app: any)
     app.use('/uploads', uploadRouter);
     app.use('/admin',manageRouter);
     app.use('/categories',categoryRouter);
+    app.use('/otp',otpRouter);
 
 }
 

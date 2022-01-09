@@ -15,6 +15,6 @@ router.post('/forgot-pwd', user_controller_1.default.forgot_pwd);
 router.patch('/forgot-pwd', user_controller_1.default.check_forgot_pwd);
 router.post('/change-pwd', user_controller_1.default.changePwd);
 router.post('/refreshToken', user_controller_1.default.refreshToken);
-router.post('/otp', user_controller_1.default.getOtp);
-router.patch('/otp', user_controller_1.default.checkotp);
+// router.post('/otp', userController.getOtp)
+// router.patch('/otp', userController.checkotp)
 exports.default = router;
