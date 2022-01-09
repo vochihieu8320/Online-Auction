@@ -122,7 +122,7 @@ class NewController
                     const token = userService.JWT(user)
                     const refreshToken = userService.refreshToken(user)
                     //update fresh token
-                    await User.updateOne({email: user.email, refreshToken: refreshToken})
+                    await User.updateOne({email: user.email}, {refreshToken: refreshToken})
                     res.json({
                         token: token,
                         refreshToken: refreshToken
