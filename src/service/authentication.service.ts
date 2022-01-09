@@ -77,7 +77,7 @@ async function is_Seller_Admin(req: any, res: any, next:any)
     const token = autHeader && autHeader.split(' ')[1];
     try {
         const user =<any> await jwt.verify(token, process.env.JWT_TOKEN_SECRET || "");
-        if(user.user_type === "3")
+        if(user.user_type === "3" || user.user_type === "2")
         {
             next();
         }
