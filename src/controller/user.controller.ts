@@ -136,14 +136,15 @@ class NewController
 
     async check_forgot_pwd(req: any, res: any)
     {
-        const {email, regCode} = req.body;
+        const {email, regCode, password} = req.body;
         try {
             const user = <any> await User.findOne({email: email});
             if(user)
             {
                 if(await userService.comparepass(regCode, user.reset_digest))
                 {
-                    await User.updateOne({email: email}, {reset_digest: ""})
+                    const hashed = await userService.hashpass(password);
+                    await User.updateOne({email: email}, {reset_digest: "", password: hashed})
                     res.sendStatus(200)
                 }
                 else
@@ -211,6 +212,20 @@ class NewController
             res.json({status: 400, error: "New Password confirm dont match"})
         }
     
+    }
+
+    async updatePassword(req: any, res: any)
+    {
+        const {email, password} = req.body;
+        const hashed = await userService.hashpass(password);
+        try {
+            await User.findOneAndUpdate({email: email}, {password: hashed});
+            res.sendStatus(200)
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(400)
+        }
+
     }
 }
 

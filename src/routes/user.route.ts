@@ -1,4 +1,5 @@
 const express = require('express')
+import route from '.';
 import userController from '../controller/user.controller';
 import userService from '../service/user.service';
 
@@ -9,7 +10,7 @@ router.post('/login', userController.Login)
 router.post('/token', userController.refreshToken)
 //check login 
 router.post('/forgot-pwd', userController.forgot_pwd)
-router.patch('/forgot-pwd', userController.check_forgot_pwd)
+router.patch('/forgot-pwd', userController.check_forgot_pwd);
 router.post('/change-pwd', userController.changePwd)
 router.post('/refreshToken', userController.refreshToken)
 // router.post('/otp', userController.getOtp)
