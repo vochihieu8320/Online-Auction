@@ -191,9 +191,10 @@ class NewController
     async changePwd(req: any, res: any)
     {
         const {email, password, new_password, new_password_confirmation} = req.body;
-        if(new_password_confirmation == new_password)
+        if(new_password_confirmation === new_password)
         {
             const user = <any> await User.findOne({ email: email});
+            if(user)
             {
                 if(await userService.comparepass(password, user.password))
                 {
@@ -205,6 +206,10 @@ class NewController
                 {
                     res.json({status: 400, error: "Password dont match"})        
                 }
+            }
+            else
+            {
+                res.json({status: 400, error: "User not found"})   
             }
         }
         else

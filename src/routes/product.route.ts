@@ -8,10 +8,10 @@ const router = express.Router();
 router.get('/', authenticationService.authentication, productController.List);
 router.get('/:productID', authenticationService.authentication, productController.show);
 router.post('/', authenticationService.authentication, 
-                 authenticationService.is_Seller_Admin,
+                 authenticationService.is_Seller,
                 productController.Add)
 router.patch('/:productID', authenticationService.authentication, 
-                            authenticationService.is_Seller_Admin,
+                            authenticationService.is_Seller,
                             productController.Update)
 router.delete('/:id', authenticationService.is_Admin,
                       productController.Delete)
