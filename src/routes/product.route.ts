@@ -5,6 +5,7 @@ import authenticationService from '../service/authentication.service';
 const router = express.Router();
 
 // router.get('/:page', authenticationService.authentication, productController.List );
+router.get('/length', authenticationService.authentication, productController.Length)
 router.get('/', authenticationService.authentication, productController.List);
 router.get('/:productID', authenticationService.authentication, productController.show);
 router.post('/', authenticationService.authentication, 
@@ -14,7 +15,8 @@ router.patch('/:productID', authenticationService.authentication,
                             authenticationService.is_Seller,
                             productController.Update)
 router.delete('/:id', authenticationService.is_Admin,
-                      productController.Delete)
+                      productController.Delete);
+
 
 export default router;
 

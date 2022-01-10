@@ -100,6 +100,17 @@ class ProductController{
             })
         }
     }
+
+    async Length(req: any, res: any){
+        try {
+            const result = await Product.count();
+            console.log(result)
+            res.json({status: 200, data: result});
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
+        }
+    }
 }
 
 export default new ProductController;
