@@ -14,21 +14,20 @@ class ProductController{
     async List(req: any, res: any,next:any)
     {
         try{
-            const {skip, limit}=req.query;
             const sort = req.query.sortBy || "price";
             const order = req.query.order || -1;
             let categories:any[] = [];
             //find category
             if(req.query.category)
             {
-                categories = <any> await ProductService.find_children(skip, limit, req.query.category)
+                categories = <any> await ProductService.find_children(+req.query.skip, +req.query.limit, req.query.category)
                     
             }
-            let result;
+            let result;req.query.skip
             if(categories.length === 0){
                 result = await Product.find({name:{$regex: req.query.name || "", $options:"$i"}})
-                                        .skip(skip)
-                                        .limit(limit)
+                                        .skip(+req.query.skip)
+                                        .limit(+req.query.limit)
                                         .sort([[ sort, order ]])
                                         .exec()
                                         
@@ -36,9 +35,9 @@ class ProductController{
             else
             {
                 result = await Product.find({name:{$regex: req.query.name || "", $options:"$i"}})
-                                        .skip(skip)
                                         .where('category').in(categories)
-                                        .limit(limit)
+                                        .skip(+req.query.skip)
+                                        .limit(+req.query.limit)
                                         .sort([[ sort, order ]])
                                         .exec();
             }
