@@ -17,7 +17,7 @@ var Product = new mongoose.Schema(
         },
         price: 
         {
-            type: String,
+            type: Number,
             required: false,
             length: 11
         },
@@ -34,7 +34,7 @@ var Product = new mongoose.Schema(
             required: false,
             minlength: 0
         },
-        categoryID:
+        category:
         {
             type: String,
             required: false,

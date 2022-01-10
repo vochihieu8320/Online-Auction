@@ -1,5 +1,6 @@
 import Product from '../model/product.model';
 import ProductService from "../service/product.service";
+import Category from '../model/category.model'
 class ProductController{
     async show(req:any,res:any){
         try{
@@ -13,18 +14,36 @@ class ProductController{
     async List(req: any, res: any,next:any)
     {
         try{
-            const {skip, limit}=req.query
-            const result = await Product.aggregate([
-                {
-                    $limit: +limit
-                },
-                {
-                    $skip: +skip
-                },
-                {
-                    $sort: {"updatedAt": -1}
-                }
-            ])
+            const {skip, limit}=req.query;
+            const sort = req.query.sortBy || "price";
+            const order = req.query.order || -1;
+            let categories:any[] = [];
+            //find category
+            if(req.query.category)
+            {
+                categories = <any> await ProductService.find_children(skip, limit, req.query.category)
+                    
+            }
+            let result;
+            if(categories.length === 0){
+                result = await Product.find({name:{$regex: req.query.name || "", $options:"$i"}})
+                                        .skip(skip)
+                                        .limit(limit)
+                                        .sort([[ sort, order ]])
+                                        .exec()
+                                        
+            }
+            else
+            {
+                result = await Product.find({name:{$regex: req.query.name || "", $options:"$i"}})
+                                        .skip(skip)
+                                        .where('category').in(categories)
+                                        .limit(limit)
+                                        .sort([[ sort, order ]])
+                                        .exec();
+            }
+            
+        
             res.json(result)
         }catch(err){
             console.log(err);
