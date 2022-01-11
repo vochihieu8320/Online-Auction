@@ -29,6 +29,7 @@ class CategoryController{
 
     async index(req: any, res: any){
         try {
+            const {skip, limit} = req.query;
             const data = await Category.aggregate([
                 {
                     $match: {parentID: null}
@@ -41,6 +42,12 @@ class CategoryController{
                         foreignField: "parentID",
                         as: "childs"
                     }
+                },
+                {
+                    $skip: +skip,
+                },
+                {
+                    $limit: +limit
                 }
             ])     
             res.json(data)
@@ -51,12 +58,27 @@ class CategoryController{
        
     }
 
+    async show(req: any, res: any){
+        try {
+            const categoryID = req.params.categoryID;
+            const result = await Category.findById(categoryID);
+            res.json({status: 200, data: result})
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
+        }
+    }
+
     async delete(req: any, res: any){
         try {
-            await Category.deleteOne({_id: req.params.categoryID});
+            // await Category.deleteOne({_id: req.params.categoryID});
+            // const child = await Category.find({parentID: req.params.categoryID});
+            // for(let i = 0; i < child.length; i++){
+            //     await Category.deleteOne({_id: child[i]._id})
+            // }
             const child = await Category.find({parentID: req.params.categoryID});
-            for(let i = 0; i < child.length; i++){
-                await Category.deleteOne({_id: child[i]._id})
+            if(child.length > 0){
+
             }
             res.sendStatus(200)
         } catch (error) {
