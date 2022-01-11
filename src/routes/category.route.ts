@@ -8,6 +8,10 @@ router.post('/', authenticationService.authentication,
                  authenticationService.is_Admin,
                  CategoryService.check_parent ,
                  CategoryController.create);
+
+router.get('/:categoryID',  authenticationService.authentication, 
+                            authenticationService.is_Admin,
+                            CategoryController.show )
 router.patch('/:categoryID', authenticationService.authentication,
                              authenticationService.is_Admin, 
                              CategoryService.check_parent, 
