@@ -15,7 +15,8 @@ var Category = new mongoose.Schema(
             minlength:3,
             maxlength:50,
         }
-    }
+    },
+    { timestamps: true}
 )
 
 const model = mongoose.model('Category', Category);

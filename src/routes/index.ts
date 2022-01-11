@@ -3,7 +3,7 @@ import auctionRouter from './aution.route';
 import bideRouter from './bide.route';
 import productRouter from './product.route';
 import uploadRouter from './upload.route';
-import manageRouter from './admin/user.route';
+import manageRouter from './admin/index.route';
 import categoryRouter from './category.route';
 import otpRouter from './otp.route';
 function route(app: any)

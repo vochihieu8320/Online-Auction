@@ -8,7 +8,7 @@ const aution_route_1 = __importDefault(require("./aution.route"));
 const bide_route_1 = __importDefault(require("./bide.route"));
 const product_route_1 = __importDefault(require("./product.route"));
 const upload_route_1 = __importDefault(require("./upload.route"));
-const user_route_2 = __importDefault(require("./admin/user.route"));
+const index_route_1 = __importDefault(require("./admin/index.route"));
 const category_route_1 = __importDefault(require("./category.route"));
 const otp_route_1 = __importDefault(require("./otp.route"));
 function route(app) {
@@ -17,7 +17,7 @@ function route(app) {
     app.use('/bides', bide_route_1.default);
     app.use('/products', product_route_1.default);
     app.use('/uploads', upload_route_1.default);
-    app.use('/admin', user_route_2.default);
+    app.use('/admin', index_route_1.default);
     app.use('/categories', category_route_1.default);
     app.use('/otp', otp_route_1.default);
 }

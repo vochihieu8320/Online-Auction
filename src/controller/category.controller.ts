@@ -49,6 +49,9 @@ class CategoryController{
                 },
                 {
                     $limit: +limit
+                },
+                {
+                    $sort: {createdAt: -1}
                 }
             ])     
             res.json(data)
