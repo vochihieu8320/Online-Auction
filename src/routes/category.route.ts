@@ -4,6 +4,9 @@ import CategoryService from '../service/category.service';
 import authenticationService from '../service/authentication.service';
 const router = express.Router();
 
+router.get('/length', authenticationService.authentication,
+                      CategoryController.Length)
+
 router.post('/', authenticationService.authentication,
                  authenticationService.is_Admin,
                  CategoryService.check_parent ,

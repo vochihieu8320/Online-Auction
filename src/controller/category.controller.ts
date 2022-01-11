@@ -1,4 +1,5 @@
 import Category from '../model/category.model';
+import CategoryService from '../service/category.service'
 
 class CategoryController{
     async create(req: any, res: any){
@@ -71,18 +72,40 @@ class CategoryController{
 
     async delete(req: any, res: any){
         try {
-            // await Category.deleteOne({_id: req.params.categoryID});
-            // const child = await Category.find({parentID: req.params.categoryID});
-            // for(let i = 0; i < child.length; i++){
-            //     await Category.deleteOne({_id: child[i]._id})
-            // }
-            const child = await Category.find({parentID: req.params.categoryID});
+            const child =<any> await Category.find({parentID: req.params.categoryID});
             if(child.length > 0){
-
+                for(let i = 0; i < child.length; i++){
+                        if(await CategoryService.delete(child[i].name)){
+                            // xoa duoc 
+                            await Category.deleteOne({_id: child[i]._id});
+                        }
+                    }
+                res.json({status: 200, data: true});                        
+           }
+            else{
+                //find category
+                const category = <any> await Category.findById(req.params.categoryID);
+                if(await CategoryService.delete(category.name)){
+                    await Category.deleteOne({_id: category._id});
+                    res.json({status: 200, data: true});                        
+                }
+                else
+                {
+                    res.json({status: 200, data: false});                        
+                }
             }
-            res.sendStatus(200)
         } catch (error) {
             console.log(error)
+            res.sendStatus(500)
+        }
+    }
+
+    async Length(req: any, res: any){
+        try {
+            const result = await Category.count();
+            res.json({status: 200, data: result});
+        } catch (error) {
+            console.log(error);
             res.sendStatus(500)
         }
     }

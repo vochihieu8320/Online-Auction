@@ -21,7 +21,6 @@ class CategoryService {
                 console.log(error);
                 resolve(false);
             }
-           
         })    
     }
 }
