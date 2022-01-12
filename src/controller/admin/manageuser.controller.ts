@@ -38,11 +38,12 @@ class ManageController
     {
         let _id = req.params.id;
         try{
+            const product = await User.findOne({seller: _id});
+            if(product){
+                return res.json({status: 200, data: false})
+            }
             await User.deleteOne({_id:_id})
-            res.json({
-                save:true,
-                status:200
-            })
+            res.json({status:200, data: true})
         }catch(error){
             console.log(error);
             res.json({

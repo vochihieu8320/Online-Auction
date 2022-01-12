@@ -31,15 +31,19 @@ router.delete('/products/:productID', authenticationService.authentication,
 
 // inbox
 
-router.get('/inboxs', authenticationService.authentication,
+router.get('/inboxes/length', authenticationService.authentication,
+                      authenticationService.is_Admin,
+                      inboxController.length)
+
+router.get('/inboxes', authenticationService.authentication,
                       authenticationService.is_Admin,
                       inboxController.index)
                     
-router.patch('/inboxs/:productID', authenticationService.authentication,
+router.patch('/inboxes/:productID', authenticationService.authentication,
                                    authenticationService.is_Admin,
                                     inboxController.update)
 
-router.get('/inboxs/search', authenticationService.authentication,
+router.get('/inboxes/search', authenticationService.authentication,
                             authenticationService.is_Admin,
                             inboxController.search)
 export default router;

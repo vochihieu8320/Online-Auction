@@ -5,6 +5,17 @@ class InboxController{
         try {
             const {skip, limit} = req.query;
             const result = await Inbox.aggregate([
+                { "$addFields": { "userID": { "$toObjectId": "$owner" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "users",
+                        localField:"userID",
+                        foreignField: "_id",
+                        as: "own"
+                    }
+                },
                 {
                     $skip: +skip
                 },
@@ -28,6 +39,17 @@ class InboxController{
             const result = await Inbox.aggregate([
                 {
                     $match: {status: status}
+                },
+                { "$addFields": { "userID": { "$toObjectId": "$owner" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "users",
+                        localField:"userID",
+                        foreignField: "_id",
+                        as: "own"
+                    }
                 },
                 {
                     $skip: +skip
@@ -58,6 +80,16 @@ class InboxController{
             }
         } catch (error) {
             
+        }
+    }
+
+    async length(req: any, res: any){
+        try {
+            const result = await Inbox.count();
+            res.json({status: 200, data: result});
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
         }
     }
 }
