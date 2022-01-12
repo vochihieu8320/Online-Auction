@@ -6,8 +6,11 @@ import authenticationService from '../../service/authentication.service';
 
 const router = express.Router();
 
-router.get('/user/list',categoryController.List);
-router.post('/user',categoryController.Register)
+//users
+router.get('/users', authenticationService.authentication,
+                     authenticationService.is_Admin,
+                     categoryController.List);
+                     
 router.delete('/user/:id',categoryController.Delete)
 
 // product 

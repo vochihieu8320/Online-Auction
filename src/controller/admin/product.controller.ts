@@ -32,8 +32,6 @@ class ProductController{
             console.log(error);
             res.sendStatus(500);
         }
-        
-
     }
 
     async delete(req: any, res: any){

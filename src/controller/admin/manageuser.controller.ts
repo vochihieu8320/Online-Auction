@@ -6,21 +6,28 @@ class ManageController
 {
     async List(req: any, res: any,next:any)
     {
-        try{
-            const list = await User.find()
-            res.json({
-                users:list
-            })
-            }
-        catch(err){
-            console.log(err)
+        try {
+            const {skip, limit} = req.query;
+            const result = await User.aggregate([
+                {
+                    $skip: +skip
+                },
+                {
+                    $limit: +limit
+                },
+                {
+                    $sort: {"updatedAt": -1}
+                }
+            ])
+            res.json(result);
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
         }
     }
     async Register(req: any, res: any)
     {
         try{
-            // const { error } = validate.regisValidate(req.body);
-            // if (error)  return res.status(400).send(error.details[0].message);
             const hashed = await userService.hashpass(req.body.password);
             const user=await User.create({
                 name: req.body.name,
