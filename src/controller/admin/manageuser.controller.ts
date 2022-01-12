@@ -75,7 +75,7 @@ class ManageController
                 const transporter = mail.connect()
                 //send mail
                 mailService.send_mail(transporter, mail_options);
-                res.sendStatus(200)
+                res.json({status: 200})
             }
             else
             {
