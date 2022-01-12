@@ -39,7 +39,7 @@ router.get('/inboxes', authenticationService.authentication,
                       authenticationService.is_Admin,
                       inboxController.index)
                     
-router.patch('/inboxes/:productID', authenticationService.authentication,
+router.patch('/inboxes/:inboxID', authenticationService.authentication,
                                    authenticationService.is_Admin,
                                     inboxController.update)
 

@@ -1,4 +1,8 @@
 import Inbox from '../../model/inbox.model';
+import template from "../../email_template/bider_seller";
+import mailService from '../../service/mail.service'
+import mail from "../../mailer/mailer";
+import User from '../../model/user.model'
 
 class InboxController{
     async index(req: any, res:any){
@@ -72,7 +76,19 @@ class InboxController{
         try {
             const inboxID = req.params.inboxID;
             try {
-                await Inbox.findByIdAndUpdate(inboxID, req.body);
+                const inbox = <any> await Inbox.findByIdAndUpdate(inboxID, req.body);
+                const user = <any> await User.findById(inbox.owner);
+                const form = {
+                    name: user.name,
+                }
+                //create a template
+                const forgot_pwd_template = template.bider_seller(form)
+                //create option (sent to who ??)
+                const mail_options = mailService.mail_options(user.email, forgot_pwd_template, "Bide to Seller");
+                //conect mail server
+                const transporter = mail.connect()
+                //send mail
+                mailService.send_mail(transporter, mail_options);
                 res.json({status: 200})
             } catch (error) {
                 console.log(error);
