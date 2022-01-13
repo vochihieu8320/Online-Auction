@@ -115,7 +115,6 @@ class ProductController{
 
     async best_bider_bide(req: any, res: any){
         try {
-            const {skip, limit} = req.query;
             let result = await Product.aggregate([
                 { $addFields: { "productID": { $toString: "$_id" }}},
                 {
@@ -130,10 +129,7 @@ class ProductController{
                 },
                 {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
                 {
-                    $skip: +skip
-                },
-                {
-                    $limit: +limit
+                    $limit: 5
                 },
                 {
                     $sort:{"auction.amount_bider_bide": -1}
@@ -145,6 +141,36 @@ class ProductController{
             res.sendStatus(500);
         }
     }
+
+    async best_price(req: any, res: any){
+        try {
+            let result = await Product.aggregate([
+                { $addFields: { "productID": { $toString: "$_id" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "auctions",
+                        localField:"productID",
+                        foreignField: "productID",
+                        as: "auction"
+                    }
+                },
+                {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
+                {
+                    $limit: 5
+                },
+                {
+                    $sort:{"auction.min_price": -1}
+                },
+            ])
+            res.json(result);
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
+        }
+    }
+
 }
 
 export default new ProductController;

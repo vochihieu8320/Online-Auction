@@ -21,13 +21,6 @@ var Product = new mongoose.Schema(
             required: false,
             length: 11
         },
-        date_add:
-        {
-            type: String,
-            required: false,
-            minlength: 5,
-            maxlength : 50
-        },
         date_bid:
         {
             type: String,
