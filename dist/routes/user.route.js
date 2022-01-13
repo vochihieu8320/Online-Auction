@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
 const user_controller_1 = __importDefault(require("../controller/user.controller"));
+const user_service_1 = __importDefault(require("../service/user.service"));
 const router = express.Router();
 router.post('/register', user_controller_1.default.Register);
 router.post('/login', user_controller_1.default.Login);
@@ -15,4 +16,6 @@ router.post('/forgot-pwd', user_controller_1.default.forgot_pwd);
 router.patch('/forgot-pwd', user_controller_1.default.check_forgot_pwd);
 router.post('/change-pwd', user_controller_1.default.changePwd);
 router.post('/refreshToken', user_controller_1.default.refreshToken);
+router.post('/bide', user_service_1.default.authentication, user_controller_1.default.bide);
+router.patch('/bide', user_service_1.default.authentication, user_controller_1.default.accept);
 exports.default = router;

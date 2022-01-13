@@ -18,6 +18,8 @@ const user_model_1 = __importDefault(require("../model/user.model"));
 const mailer_1 = __importDefault(require("../mailer/mailer"));
 const template_1 = __importDefault(require("../email_template/template"));
 const Validation_service_1 = __importDefault(require("../service/Validation.service"));
+const aution_model_1 = __importDefault(require("../model/aution.model"));
+const auction_history_model_1 = __importDefault(require("../model/auction_history.model"));
 class NewController {
     forgot_pwd(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -232,6 +234,51 @@ class NewController {
             catch (error) {
                 console.log(error);
                 res.sendStatus(400);
+            }
+        });
+    }
+    bide(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const productID = req.body.productID;
+                const auction = yield aution_model_1.default.findOne({ productID: productID });
+                if (auction) {
+                    const suggestion = (+auction.min_price) + (+auction.bide);
+                    res.json({ status: 200, data: suggestion });
+                }
+                else {
+                    res.sendStatus(400);
+                }
+            }
+            catch (error) {
+                console.log(error);
+                res.sendStatus(500);
+            }
+        });
+    }
+    accept(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const productID = req.body.productID;
+                const userID = req.body.userID;
+                if (productID && userID) {
+                    //chap nhan muc gia
+                    yield aution_model_1.default.updateOne({ productID: productID }, { min_price: req.body.price });
+                    //luu vao lich su
+                    const history = yield auction_history_model_1.default.create({
+                        userID: userID,
+                        productID: productID,
+                        price: req.body.price
+                    });
+                    res.json({ status: 200, data: history });
+                }
+                else {
+                    res.sendStatus(500);
+                }
+            }
+            catch (error) {
+                console.log(error);
+                res.sendStatus(500);
             }
         });
     }

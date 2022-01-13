@@ -1,5 +1,4 @@
 const express = require('express')
-import route from '.';
 import userController from '../controller/user.controller';
 import userService from '../service/user.service';
 
@@ -13,5 +12,7 @@ router.post('/forgot-pwd', userController.forgot_pwd)
 router.patch('/forgot-pwd', userController.check_forgot_pwd);
 router.post('/change-pwd', userController.changePwd)
 router.post('/refreshToken', userController.refreshToken)
+router.post('/bide', userService.authentication, userController.bide);
+router.patch('/bide', userService.authentication, userController.accept);
 export default router;
 

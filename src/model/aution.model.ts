@@ -22,7 +22,21 @@ const Auction = new mongoose.Schema(
         //số lượt bider ra giá
         amount_bider_bide:{
             type: String,
+        },
+        status:{
+            type: Number,
+            required: true
+        },
+          //gia trị thực của sản phẩm
+        real_price:{
+            type: String,
+            required: true
+        },
+        bide:{
+            type: String,
+            required: true
         }
+        
        
     },
     { timestamps: true}

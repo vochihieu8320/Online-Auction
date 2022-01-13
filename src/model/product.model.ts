@@ -44,6 +44,11 @@ var Product = new mongoose.Schema(
         },
         img: {
             type: String,
+            required: true,
+        },
+        sub_img:{
+            type: String,
+            required: true
         }
     },
     { timestamps: true,collection:'Product'}

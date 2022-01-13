@@ -19,12 +19,7 @@ class AutionController {
     
     async createAuctions(req :any, res :any){
         try {
-            const body = {
-                holderID: req.body.holderID,
-                productID: req.body.productID,
-                min_price: req.body.min_price
-            }
-            const result = await Auction.create(body);
+            const result = await Auction.create(req.body);
             res.json(result);
         } catch (error) {
             console.log(error);

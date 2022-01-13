@@ -4,7 +4,10 @@ import User from '../model/user.model';
 import mail from "../mailer/mailer";
 import template from "../email_template/template"
 import validate from '../service/Validation.service';
-import otp_template from '../email_template/otp'
+import otp_template from '../email_template/otp';
+import Auction from '../model/aution.model';
+import AuctionHistory from '../model/auction_history.model';
+
 class NewController
 {
    
@@ -236,6 +239,49 @@ class NewController
             res.sendStatus(400)
         }
 
+    }
+
+    async bide(req: any, res: any){
+        try {
+            const productID = req.body.productID;
+            const auction = <any>await Auction.findOne({productID: productID});
+            if(auction){
+                const suggestion = (+auction.min_price) + (+auction.bide);
+                res.json({status: 200, data: suggestion})
+            }   
+            else
+            {
+                res.sendStatus(400)
+            }         
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
+        }
+    }
+
+    async accept(req: any, res: any){
+        try {
+            const productID = req.body.productID;
+            const userID = req.body.userID;
+            if(productID && userID){
+                //chap nhan muc gia
+                await Auction.updateOne({productID: productID}, {min_price: req.body.price});
+                //luu vao lich su
+                const history = await AuctionHistory.create({
+                    userID: userID,
+                    productID: productID,
+                    price : req.body.price
+                }) 
+                res.json({status: 200, data: history})
+            }
+            else
+            {
+                res.sendStatus(500)
+            }
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
+        }
     }
 }
 

@@ -11,12 +11,10 @@ const Bide = new mongoose.Schema(
         //giá tối đa có thể chi trả cho sản phẩm
         max_price:{
             type: String,
-            required: true
         },
         //giá đang đấu giá hiện tại
         current_price: {
             type: String,
-            required: true
         },
         auto_bide:{
             type: String,
