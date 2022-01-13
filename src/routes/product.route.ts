@@ -9,6 +9,7 @@ router.get('/length', authenticationService.authentication, productController.Le
 router.get('/', authenticationService.authentication, productController.List);
 router.get('/best-bider-bide', authenticationService.authentication, productController.best_bider_bide);
 router.get('/best-price', authenticationService.authentication, productController.best_price);
+router.get('/best-date-end', authenticationService.authentication, productController.betst_date_bide)
 router.get('/:productID', authenticationService.authentication, productController.show);
 router.post('/', authenticationService.authentication, 
                  authenticationService.is_Seller,

@@ -171,6 +171,17 @@ class ProductController{
         }
     }
 
+    async betst_date_bide(req: any, res: any){
+        try {
+            let result = await Product.find({$where: function() { return (Date.parse(this.date_bid) > (new Date()).getTime() ) }})
+                                      .limit(5)
+                                      .sort({"date_bid": -1})
+            res.json(result);
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
+        }
+    }
 }
 
 export default new ProductController;
