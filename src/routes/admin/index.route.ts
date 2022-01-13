@@ -11,6 +11,11 @@ router.get('/users/reset-password/:userID', authenticationService.authentication
                                     authenticationService.is_Admin,
                                     usercontroller.reset
                                     )
+
+router.patch('/users/seller_to_bider/:userID', authenticationService.authentication, 
+                                                authenticationService.is_Admin,
+                                                usercontroller.seller_to_bider)
+                                                                                    
 router.get('/users/length', authenticationService.authentication,
                             authenticationService.is_Admin,
                             usercontroller.length)

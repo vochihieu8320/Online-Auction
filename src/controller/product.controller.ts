@@ -1,6 +1,8 @@
 import Product from '../model/product.model';
 import ProductService from "../service/product.service";
-import Category from '../model/category.model'
+import Category from '../model/category.model';
+import sortService from "../service/sort.service";
+
 class ProductController{
     async show(req:any,res:any){
         try{
@@ -108,6 +110,39 @@ class ProductController{
         } catch (error) {
             console.log(error);
             res.sendStatus(500)
+        }
+    }
+
+    async best_bider_bide(req: any, res: any){
+        try {
+            const {skip, limit} = req.query;
+            let result = await Product.aggregate([
+                { $addFields: { "productID": { $toString: "$_id" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "auctions",
+                        localField:"productID",
+                        foreignField: "productID",
+                        as: "auction"
+                    }
+                },
+                {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
+                {
+                    $skip: +skip
+                },
+                {
+                    $limit: +limit
+                },
+                {
+                    $sort:{"auction.amount_bider_bide": -1}
+                },
+            ])
+            res.json(result);
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
         }
     }
 }

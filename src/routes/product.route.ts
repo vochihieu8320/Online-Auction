@@ -7,6 +7,7 @@ const router = express.Router();
 // router.get('/:page', authenticationService.authentication, productController.List );
 router.get('/length', authenticationService.authentication, productController.Length)
 router.get('/', authenticationService.authentication, productController.List);
+router.get('/best-bider-bide', authenticationService.authentication, productController.best_bider_bide)
 router.get('/:productID', authenticationService.authentication, productController.show);
 router.post('/', authenticationService.authentication, 
                  authenticationService.is_Seller,

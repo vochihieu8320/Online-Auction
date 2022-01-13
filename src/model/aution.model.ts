@@ -16,9 +16,14 @@ const Auction = new mongoose.Schema(
         },
         //giá để vào sản phẩm
         min_price:{
-            type: String,
+            type: Number,
             required: true
+        },
+        //số lượt bider ra giá
+        amount_bider_bide:{
+            type: String,
         }
+       
     },
     { timestamps: true}
 )
