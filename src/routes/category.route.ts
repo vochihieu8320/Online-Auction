@@ -7,6 +7,9 @@ const router = express.Router();
 router.get('/length', authenticationService.authentication,
                       CategoryController.Length)
 
+router.get('/short-hand', authenticationService.authentication,
+                          CategoryController.index_not_parent)
+                          
 router.post('/', authenticationService.authentication,
                  authenticationService.is_Admin,
                  CategoryService.check_parent ,

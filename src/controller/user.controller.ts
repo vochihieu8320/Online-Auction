@@ -39,7 +39,7 @@ class NewController
             }
             else
             {
-                res.sendStatus(400)
+                res.json({status: 400, error: "Email not found"})
             }
         } catch (error) {
             console.log(error)
@@ -51,44 +51,26 @@ class NewController
     {
         try{
             const hashed = await userService.hashpass(req.body.password);
-            await User.create({
+            const user = <any> await User.create({
                 name: req.body.name,
                 email: req.body.email,
                 password: hashed,
                 user_type: req.body.user_type
             })
-            res.sendStatus(200)
+            const token = userService.JWT(user)
+            const refreshToken = userService.refreshToken(user)
+            //update fresh token
+            await User.updateOne({email: user.email}, {refreshToken: refreshToken})
+            res.json({
+                token: token,
+                refreshToken: refreshToken
+            });
         }catch(err){
             res.json({status:400, error: "name or email is already taken"})
             console.log(err);
         }    
     }
     
-    // async getOtp(req: any, res: any){
-    //     try {
-    //             const regCode = userService.generateRegCode();
-    
-    //             const form = {
-    //                 name : user.name,
-    //                 otp: regCode
-    //             }
-    //             //create template
-    //             const template = <any> otp_template.otp_template(form);
-    //             const mail_options = mailService.mail_options(user.email, template, "Active Account");
-    //             const transporter = mail.connect()
-    //             //send mail
-    //             mailService.send_mail(transporter, mail_options);
-    //             //luu db
-    //             await User.findOneAndUpdate({email: user.email}, {otp: regCode});
-    //             res.sendStatus(200)
-    //         }
-    //     } catch (error) {
-    //         console.log(error);
-    //         res.sendStatus(400)
-    //     }
-       
-    // }
-
     async checkotp(req: any, res: any) {
         try {
             try {
@@ -133,7 +115,7 @@ class NewController
                 }
             else
             {
-                res.sendStatus(400)
+                res.json({status: 400, error: "Email not found"})
             }
     }
 
@@ -278,6 +260,17 @@ class NewController
             {
                 res.sendStatus(500)
             }
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
+        }
+    }
+
+    async show(req: any, res: any){
+        try {
+            const userID = req.params.userID
+            const result = await User.findById(userID);
+            res.json(result);
         } catch (error) {
             console.log(error);
             res.sendStatus(500)

@@ -1,10 +1,26 @@
 import Bide from '../model/bide.model';
+import Auction_History from '../model/auction_history.model'
 
 class BideController{
     async addBide(req: any, res: any){
         try {
-            const result = await Bide.create(req.body);
-            res.json(result);
+            const check = await Bide.findOne({userID: req.body.userID, productID: req.body.productID})
+            if(check)
+            {
+                await Bide.updateOne({userID: req.body.userID, productID: req.body.productID}, req.body);
+            }
+            else
+            {
+                await Bide.create(req.body);
+                const body = {
+                    userID: req.body.userID,
+                    productID: req.body.productID,
+                    price: req.body.current_price
+                }
+                await Auction_History.create(body);
+            }
+            
+            res.json({status: 200});
         } catch (error) {
             console.log(error); 
             res.sendStatus(400)           
@@ -13,8 +29,8 @@ class BideController{
 
     async update(req: any, res: any){
         try {
-            const userID = req.params.userID;
-            await Bide.findOneAndUpdate({userID: userID}, req.body);
+            await Bide.findOneAndUpdate({userID: req.body.userID, productID: req.body.productID},
+                {auto_bide: req.body.auto_bide});
             res.json({status: 200})
         } catch (error) {
             console.log(error);

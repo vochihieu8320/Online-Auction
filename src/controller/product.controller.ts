@@ -2,11 +2,32 @@ import Product from '../model/product.model';
 import ProductService from "../service/product.service";
 import Category from '../model/category.model';
 import sortService from "../service/sort.service";
+import Auction from '../model/aution.model';
+const mongoose = require("mongoose");
 
 class ProductController{
     async show(req:any,res:any){
         try{
-            const product = await Product.findById(req.params.productID);
+            const productID = req.params.productID;
+            const ObjectId = mongoose.Types.ObjectId;
+
+            const product = await Product.aggregate([
+                {
+                    $match: {_id: ObjectId(productID)}
+                },
+                 { $addFields: { "productID": { $toString: "$_id" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "auctions",
+                        localField:"productID",
+                        foreignField: "productID",
+                        as: "auction"
+                    }
+                },
+                {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
+            ])
             res.json(product);
         }catch(err){
             console.log(err);
@@ -25,33 +46,36 @@ class ProductController{
                 categories = <any> await ProductService.find_children(+req.query.skip, +req.query.limit, req.query.category)
                     
             }
-            let result;req.query.skip
+            let result;
+            let count = 0;
             if(categories.length === 0){
-                result = await Product.find({name:{$regex: req.query.name || "", $options:"$i"}})
+                result = <any> await Product.find({name:{$regex: req.query.name || "", $options:"$i"}})
                                         .skip(+req.query.skip)
                                         .limit(+req.query.limit)
                                         .sort([[ sort, order ]])
                                         .exec()
-                                        
+                 count = await Product.count({name:{$regex: req.query.name || "", $options:"$i"}});
             }
             else
             {
-                result = await Product.find({name:{$regex: req.query.name || "", $options:"$i"}})
+                result = <any> await Product.find({name:{$regex: req.query.name || "", $options:"$i"}})
                                         .where('category').in(categories)
                                         .skip(+req.query.skip)
                                         .limit(+req.query.limit)
                                         .sort([[ sort, order ]])
                                         .exec();
+                 count = await Product.count({name:{$regex: req.query.name || "", $options:"$i"}}).where('category').in(categories)                
             }
             
         
-            res.json(result)
+            res.json({data:result, count: count})
         }catch(err){
             console.log(err);
             res.sendStatus(400);
         }
     }
 
+    
     async Add (req: any, res: any)
     {
        try{
@@ -129,7 +153,7 @@ class ProductController{
                 },
                 {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
                 {
-                    $limit: 5
+                    $limit: 4
                 },
                 {
                     $sort:{"auction.amount_bider_bide": -1}
@@ -158,7 +182,7 @@ class ProductController{
                 },
                 {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
                 {
-                    $limit: 5
+                    $limit: 4
                 },
                 {
                     $sort:{"auction.min_price": -1}
@@ -173,9 +197,20 @@ class ProductController{
 
     async betst_date_bide(req: any, res: any){
         try {
-            let result = await Product.find({$where: function() { return (Date.parse(this.date_bid) > (new Date()).getTime() ) }})
-                                      .limit(5)
-                                      .sort({"date_bid": -1})
+            let result = <any> await Product.find({$where: function() { return (Date.parse(this.date_bid) > (new Date()).getTime() ) }})
+                                      .limit(4)
+                                      .sort({"date_bid": -1});
+            
+            res.json(result);
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
+        }
+    }
+
+    async getAuctions(req: any, res: any){
+        try {
+            const result = <any> await Auction.findOne({productID: req.params.productID});
             res.json(result);
         } catch (error) {
             console.log(error);

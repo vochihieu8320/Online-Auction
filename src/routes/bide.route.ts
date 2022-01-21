@@ -5,6 +5,5 @@ import authenticationService from '../service/authentication.service';
 const router = express.Router();
 
 router.post('/', authenticationService.authentication, BideController.addBide);
-router.patch('/:userID', authenticationService.authentication, BideController.update)
 
 export default router;

@@ -47,7 +47,7 @@ class NewController {
                     res.sendStatus(200);
                 }
                 else {
-                    res.sendStatus(400);
+                    res.json({ status: 400, error: "Email not found" });
                 }
             }
             catch (error) {
@@ -60,13 +60,20 @@ class NewController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const hashed = yield user_service_1.default.hashpass(req.body.password);
-                yield user_model_1.default.create({
+                const user = yield user_model_1.default.create({
                     name: req.body.name,
                     email: req.body.email,
                     password: hashed,
                     user_type: req.body.user_type
                 });
-                res.sendStatus(200);
+                const token = user_service_1.default.JWT(user);
+                const refreshToken = user_service_1.default.refreshToken(user);
+                //update fresh token
+                yield user_model_1.default.updateOne({ email: user.email }, { refreshToken: refreshToken });
+                res.json({
+                    token: token,
+                    refreshToken: refreshToken
+                });
             }
             catch (err) {
                 res.json({ status: 400, error: "name or email is already taken" });
@@ -74,28 +81,6 @@ class NewController {
             }
         });
     }
-    // async getOtp(req: any, res: any){
-    //     try {
-    //             const regCode = userService.generateRegCode();
-    //             const form = {
-    //                 name : user.name,
-    //                 otp: regCode
-    //             }
-    //             //create template
-    //             const template = <any> otp_template.otp_template(form);
-    //             const mail_options = mailService.mail_options(user.email, template, "Active Account");
-    //             const transporter = mail.connect()
-    //             //send mail
-    //             mailService.send_mail(transporter, mail_options);
-    //             //luu db
-    //             await User.findOneAndUpdate({email: user.email}, {otp: regCode});
-    //             res.sendStatus(200)
-    //         }
-    //     } catch (error) {
-    //         console.log(error);
-    //         res.sendStatus(400)
-    //     }
-    // }
     checkotp(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -143,7 +128,7 @@ class NewController {
                 });
             }
             else {
-                res.sendStatus(400);
+                res.json({ status: 400, error: "Email not found" });
             }
         });
     }
@@ -275,6 +260,19 @@ class NewController {
                 else {
                     res.sendStatus(500);
                 }
+            }
+            catch (error) {
+                console.log(error);
+                res.sendStatus(500);
+            }
+        });
+    }
+    show(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const userID = req.params.userID;
+                const result = yield user_model_1.default.findById(userID);
+                res.json(result);
             }
             catch (error) {
                 console.log(error);

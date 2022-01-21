@@ -3,6 +3,11 @@ import mongoose from 'mongoose';
 
 const Bide = new mongoose.Schema(
     {
+        userID:
+        {
+            type: String,
+            required: true
+        },
         productID: 
         { 
             type: String,

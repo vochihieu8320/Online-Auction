@@ -22,7 +22,7 @@ class OtpController{
                 mailService.send_mail(transporter, mail_options);
                 //luu db
                 await Otp.create({email: req.body.email, otp: regCode});
-                res.sendStatus(200)
+                res.json({status: 200})
         } catch (error) {
                 res.sendStatus(400);
         }
@@ -30,15 +30,15 @@ class OtpController{
 
     async update(req: any, res: any){
         try {
-            if(await Otp.findOneAndUpdate({email: req.body.email, otp: req.body.otp}, {otp: ""})){
-                res.sendStatus(200)
+            if(await Otp.findOne({email: req.body.email, otp: req.body.otp})){
+                res.json({status: 200})
             }
             else{
-                res.sendStatus(400)
+                res.json({status:400, error: "invalid otp"});
             }
         } catch (error) {
             console.log(error);
-            res.sendStatus()
+            res.sendStatus(400)
         }
     }
 }

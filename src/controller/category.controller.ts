@@ -27,6 +27,22 @@ class CategoryController{
             res.sendStatus(500)
         }
     }
+    async index_not_parent(req: any, res: any){
+        try {
+            const data = await Category.aggregate([
+                {
+                    $match: {parentID: { "$exists": true}}
+                },
+                {
+                    $sort: {createdAt: -1}
+                }
+            ])     
+            res.json(data)
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
+        }
+    }
 
     async index(req: any, res: any){
         try {
