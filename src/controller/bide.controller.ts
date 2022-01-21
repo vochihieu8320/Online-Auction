@@ -4,6 +4,7 @@ import Auction_History from '../model/auction_history.model'
 class BideController{
     async addBide(req: any, res: any){
         try {
+            let auction_history:any
             const check = await Bide.findOne({userID: req.body.userID, productID: req.body.productID})
             if(check)
             {
@@ -17,10 +18,10 @@ class BideController{
                     productID: req.body.productID,
                     price: req.body.current_price
                 }
-                await Auction_History.create(body);
+               auction_history = await Auction_History.create(body);
             }
             
-            res.json({status: 200});
+            res.json({status: 200, data: auction_history});
         } catch (error) {
             console.log(error); 
             res.sendStatus(400)           
