@@ -7,6 +7,7 @@ import validate from '../service/Validation.service';
 import otp_template from '../email_template/otp';
 import Auction from '../model/aution.model';
 import AuctionHistory from '../model/auction_history.model';
+import Bide from '../model/bide.model'
 
 class NewController
 {
@@ -274,6 +275,17 @@ class NewController
         } catch (error) {
             console.log(error);
             res.sendStatus(500)
+        }
+    }
+
+    async current_bide(req: any, res: any){
+        const userID = req.params.userID;
+        const productID = req.params.productID;
+        try {
+            const result = await Bide.findOne({userID: userID, productID: productID});
+            res.json(result);
+        } catch (error) {
+            res.sendStatus(400)
         }
     }
 }

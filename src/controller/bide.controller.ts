@@ -1,5 +1,6 @@
 import Bide from '../model/bide.model';
 import Auction_History from '../model/auction_history.model'
+import Auction from '../model/aution.model';
 
 class BideController{
     async addBide(req: any, res: any){
@@ -19,6 +20,11 @@ class BideController{
                     price: req.body.current_price
                 }
                auction_history = await Auction_History.create(body);
+               //cap nhat lai gia hiện tại của sản phẩm
+                const aucton = {
+                    min_price: +req.body.current_price
+                }
+                await Auction.findOneAndUpdate({productID: req.body.productID}, aucton);
             }
             
             res.json({status: 200, data: auction_history});

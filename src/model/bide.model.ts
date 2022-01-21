@@ -23,6 +23,10 @@ const Bide = new mongoose.Schema(
         },
         auto_bide:{
             type: String,
+        },
+        bid_step:
+        {
+            type: Number,
         }
     },
     { timestamps: true}
