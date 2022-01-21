@@ -1,11 +1,11 @@
 import Bide from '../model/bide.model';
 import Auction_History from '../model/auction_history.model'
 import Auction from '../model/aution.model';
+import AuctionHistoryService from '../service/auction_history,service';
 
 class BideController{
     async addBide(req: any, res: any){
         try {
-            let auction_history:any
             const check = await Bide.findOne({userID: req.body.userID, productID: req.body.productID})
             if(check)
             {
@@ -14,19 +14,20 @@ class BideController{
             else
             {
                 await Bide.create(req.body);
-                const body = {
-                    userID: req.body.userID,
-                    productID: req.body.productID,
-                    price: req.body.current_price
-                }
-               auction_history = await Auction_History.create(body);
-               //cap nhat lai gia hiện tại của sản phẩm
-                const aucton = {
-                    min_price: +req.body.current_price,
-                    status: 1
-                }
-                await Auction.findOneAndUpdate({productID: req.body.productID}, aucton);
             }
+
+            const aucton = {
+                min_price: +req.body.current_price,
+                status: 1
+            }
+            await Auction.findOneAndUpdate({productID: req.body.productID}, aucton);  
+        
+            const body = {
+                userID: req.body.userID,
+                productID: req.body.productID,
+                price: req.body.current_price
+            }
+            const auction_history = await AuctionHistoryService.create(body);
             
             res.json({status: 200, data: auction_history});
         } catch (error) {
