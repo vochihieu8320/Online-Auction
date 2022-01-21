@@ -20,6 +20,7 @@ const template_1 = __importDefault(require("../email_template/template"));
 const Validation_service_1 = __importDefault(require("../service/Validation.service"));
 const aution_model_1 = __importDefault(require("../model/aution.model"));
 const auction_history_model_1 = __importDefault(require("../model/auction_history.model"));
+const bide_model_1 = __importDefault(require("../model/bide.model"));
 class NewController {
     forgot_pwd(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -277,6 +278,19 @@ class NewController {
             catch (error) {
                 console.log(error);
                 res.sendStatus(500);
+            }
+        });
+    }
+    current_bide(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const userID = req.params.userID;
+            const productID = req.params.productID;
+            try {
+                const result = yield bide_model_1.default.findOne({ userID: userID, productID: productID });
+                res.json(result);
+            }
+            catch (error) {
+                res.sendStatus(400);
             }
         });
     }

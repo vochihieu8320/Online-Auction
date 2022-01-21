@@ -19,4 +19,5 @@ router.post('/refreshToken', user_controller_1.default.refreshToken);
 router.post('/bide', user_service_1.default.authentication, user_controller_1.default.bide);
 router.patch('/bide', user_service_1.default.authentication, user_controller_1.default.accept);
 router.get('/:userID', user_service_1.default.authentication, user_controller_1.default.show);
+router.get('/:userID/bide/:productID', user_service_1.default.authentication, user_controller_1.default.current_bide);
 exports.default = router;

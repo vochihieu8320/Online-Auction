@@ -22,7 +22,8 @@ class BideController{
                auction_history = await Auction_History.create(body);
                //cap nhat lai gia hiện tại của sản phẩm
                 const aucton = {
-                    min_price: +req.body.current_price
+                    min_price: +req.body.current_price,
+                    status: 1
                 }
                 await Auction.findOneAndUpdate({productID: req.body.productID}, aucton);
             }
