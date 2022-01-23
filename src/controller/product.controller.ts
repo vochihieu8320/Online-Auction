@@ -229,6 +229,41 @@ class ProductController{
             res.sendStatus(500);
         }
     }
+
+    async seller_products(req: any, res: any){
+        const sellerID = req.query.sellerID;
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        try {
+            const result = await Product.aggregate([
+                {
+                    $match: {seller: sellerID}
+                },
+                { $addFields: { "productID": { $toString: "$_id" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "auctions",
+                        localField:"productID",
+                        foreignField: "productID",
+                        as: "auction"
+                    }
+                },
+                {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
+                {
+                    $skip: +skip
+                },
+                {
+                    $limit: +limit
+                }
+            ])
+            res.json(result)
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
+        }
+    }
 }
 
 export default new ProductController;
