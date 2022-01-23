@@ -4,6 +4,11 @@ import Category from '../model/category.model';
 import sortService from "../service/sort.service";
 import Auction from '../model/aution.model';
 const mongoose = require("mongoose");
+import reject_template from "../email_template/reject_bide"
+import mailService from '../service/mail.service'
+import mail from "../mailer/mailer";
+import Bide from '../model/bide.model';
+import User from '../model/user.model';
 
 class ProductController{
     async show(req:any,res:any){
@@ -236,9 +241,6 @@ class ProductController{
         const limit = req.query.limit;
         try {
             const result = await Product.aggregate([
-                {
-                    $match: {seller: sellerID}
-                },
                 { $addFields: { "productID": { $toString: "$_id" }}},
                 {
                     $lookup:
@@ -263,6 +265,9 @@ class ProductController{
                     }
                 },
                 {
+                    $match: {seller: sellerID, "auction.status": {$nin: [2]} }
+                },
+                {
                     $skip: +skip
                 },
                 {
@@ -275,6 +280,57 @@ class ProductController{
             console.log(error);
             res.sendStatus(500)
         }
+    }
+
+    async reject_product(req: any, res: any)
+    {
+        try {
+            const {userID, productID} = req.body
+            //delete bide
+            await Bide.findOneAndDelete({userID: userID, productID: productID})
+            //find all bider of this product
+            const biders = <any> await Bide.find({productID: productID});
+            let holder;
+            let min_price = 0
+            for (let i = 0; i < biders.length; i++)
+            {
+                if(+biders[i].current_price > min_price)
+                {
+                    min_price = +biders[i].current_price
+                    holder = biders[i].userID
+                }         
+            }
+            //update auction
+            if(holder)
+            {
+                await Auction.findOneAndUpdate({productID: productID}, {min_price: min_price, holderID: holder})
+            }
+            else
+            {
+                const auction = <any >await Auction.findOne({productID: productID});
+                await auction.update({min_price: auction.real_price})
+            }
+            //send mail for bider
+            const user = <any> await User.findById(userID);
+            console.log("user", user);
+            const product = <any> await Product.findById(productID);
+            const form = {
+                name: user.name,
+                product_name: product.name,
+            }
+            const reject = reject_template.reject_template(form)
+            //create option (sent to who ??)
+            const mail_options = mailService.mail_options(user.email, reject, "Reject Bid");
+            //conect mail server
+            const transporter = mail.connect()
+            //send mail
+            mailService.send_mail(transporter, mail_options);
+            res.json({status: 200})
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
+        }
+      
     }
 }
 
