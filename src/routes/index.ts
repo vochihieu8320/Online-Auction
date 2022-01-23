@@ -6,7 +6,8 @@ import uploadRouter from './upload.route';
 import manageRouter from './admin/index.route';
 import categoryRouter from './category.route';
 import otpRouter from './otp.route';
-import inboxRouter from './inbox.route'
+import inboxRouter from './inbox.route';
+import auction_historyRouter from './auction_history.route'
 function route(app: any)
 {
     app.use('/users', userRouter);
@@ -18,6 +19,7 @@ function route(app: any)
     app.use('/categories',categoryRouter);
     app.use('/otp',otpRouter);
     app.use('/inboxes', inboxRouter);
+    app.use('/auction-history', auction_historyRouter)
 }
 
 export default route;

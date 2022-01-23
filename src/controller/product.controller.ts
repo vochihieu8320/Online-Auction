@@ -217,6 +217,18 @@ class ProductController{
             res.sendStatus(500);
         }
     }
+
+    async relatedProducts(req: any, res: any){
+        const {productID, category} = req.body;
+        try {
+            const result = await Product.find({_id: {$nin: productID}, category: category})
+                                        .limit(5)
+            res.json(result);
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
+        }
+    }
 }
 
 export default new ProductController;
