@@ -57,6 +57,10 @@ const User = new mongoose.Schema(
         },
         otp:{
             type: String
+        },
+        rating:
+        {
+            type: String,
         }
     },
     { timestamps: true}

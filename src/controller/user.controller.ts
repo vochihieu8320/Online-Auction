@@ -8,6 +8,7 @@ import otp_template from '../email_template/otp';
 import Auction from '../model/aution.model';
 import AuctionHistory from '../model/auction_history.model';
 import Bide from '../model/bide.model'
+import RatingService from '../service/rating.service'
 
 class NewController
 {
@@ -270,8 +271,10 @@ class NewController
     async show(req: any, res: any){
         try {
             const userID = req.params.userID
-            const result = await User.findById(userID);
-            res.json(result);
+            const result = <any> await User.findById(userID);
+            const rating = RatingService.show(result.rating);
+            console.log("rating", rating);
+            res.json({data:result, rating: rating});
         } catch (error) {
             console.log(error);
             res.sendStatus(500)

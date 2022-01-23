@@ -21,6 +21,7 @@ const Validation_service_1 = __importDefault(require("../service/Validation.serv
 const aution_model_1 = __importDefault(require("../model/aution.model"));
 const auction_history_model_1 = __importDefault(require("../model/auction_history.model"));
 const bide_model_1 = __importDefault(require("../model/bide.model"));
+const rating_service_1 = __importDefault(require("../service/rating.service"));
 class NewController {
     forgot_pwd(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -273,7 +274,9 @@ class NewController {
             try {
                 const userID = req.params.userID;
                 const result = yield user_model_1.default.findById(userID);
-                res.json(result);
+                const rating = rating_service_1.default.show(result.rating);
+                console.log("rating", rating);
+                res.json({ data: result, rating: rating });
             }
             catch (error) {
                 console.log(error);

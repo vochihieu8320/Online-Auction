@@ -51,6 +51,9 @@ const User = new mongoose_1.default.Schema({
     },
     otp: {
         type: String
+    },
+    rating: {
+        type: String,
     }
 }, { timestamps: true });
 User.index({ email: 1 });
