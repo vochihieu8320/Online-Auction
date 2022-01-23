@@ -188,7 +188,7 @@ class NewController
                     {
                         const hash_newpassword = await userService.hashpass(new_password);
                         await User.findOneAndUpdate({email: email}, {password: hash_newpassword});
-                        res.sendStatus(200)
+                        res.json({status: 200})
                     }
                     else
                     {

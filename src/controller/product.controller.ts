@@ -251,6 +251,17 @@ class ProductController{
                     }
                 },
                 {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
+                { $addFields: { "holder": { $toObjectId: "$auction.holderID" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "users",
+                        localField:"holder",
+                        foreignField: "_id",
+                        as: "user"
+                    }
+                },
                 {
                     $skip: +skip
                 },
@@ -258,7 +269,8 @@ class ProductController{
                     $limit: +limit
                 }
             ])
-            res.json(result)
+            const count = await Product.count({seller: sellerID})
+            res.json({data: result, count: count})
         } catch (error) {
             console.log(error);
             res.sendStatus(500)

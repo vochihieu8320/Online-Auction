@@ -191,7 +191,7 @@ class NewController {
                         if (yield user_service_1.default.comparepass(password, user.password)) {
                             const hash_newpassword = yield user_service_1.default.hashpass(new_password);
                             yield user_model_1.default.findOneAndUpdate({ email: email }, { password: hash_newpassword });
-                            res.sendStatus(200);
+                            res.json({ status: 200 });
                         }
                         else {
                             res.json({ status: 400, error: "Password dont match" });
