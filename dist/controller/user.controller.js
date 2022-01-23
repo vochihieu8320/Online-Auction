@@ -275,7 +275,6 @@ class NewController {
                 const userID = req.params.userID;
                 const result = yield user_model_1.default.findById(userID);
                 const rating = rating_service_1.default.show(result.rating);
-                console.log("rating", rating);
                 res.json({ data: result, rating: rating });
             }
             catch (error) {
@@ -294,6 +293,19 @@ class NewController {
             }
             catch (error) {
                 res.sendStatus(400);
+            }
+        });
+    }
+    update_me(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const userID = req.params.userID;
+                yield user_model_1.default.findByIdAndUpdate(userID, req.body);
+                res.json({ status: 200 });
+            }
+            catch (error) {
+                console.log(error);
+                res.sendStatus(500);
             }
         });
     }

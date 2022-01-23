@@ -20,4 +20,5 @@ router.post('/bide', user_service_1.default.authentication, user_controller_1.de
 router.patch('/bide', user_service_1.default.authentication, user_controller_1.default.accept);
 router.get('/:userID', user_service_1.default.authentication, user_controller_1.default.show);
 router.get('/:userID/bide/:productID', user_service_1.default.authentication, user_controller_1.default.current_bide);
+router.patch('/update_me/:userID', user_service_1.default.authentication, user_controller_1.default.update_me);
 exports.default = router;

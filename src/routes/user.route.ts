@@ -15,6 +15,7 @@ router.post('/refreshToken', userController.refreshToken)
 router.post('/bide', userService.authentication, userController.bide);
 router.patch('/bide', userService.authentication, userController.accept);
 router.get('/:userID', userService.authentication, userController.show);
-router.get('/:userID/bide/:productID', userService.authentication, userController.current_bide)
+router.get('/:userID/bide/:productID', userService.authentication, userController.current_bide);
+router.patch('/update_me/:userID', userService.authentication, userController.update_me)
 export default router;
 

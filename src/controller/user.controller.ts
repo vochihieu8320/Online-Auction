@@ -273,7 +273,6 @@ class NewController
             const userID = req.params.userID
             const result = <any> await User.findById(userID);
             const rating = RatingService.show(result.rating);
-            console.log("rating", rating);
             res.json({data:result, rating: rating});
         } catch (error) {
             console.log(error);
@@ -289,6 +288,18 @@ class NewController
             res.json(result);
         } catch (error) {
             res.sendStatus(400)
+        }
+    }
+
+    async update_me(req: any, res: any)
+    {
+        try {
+            const userID = req.params.userID;
+            await User.findByIdAndUpdate(userID, req.body);
+            res.json({status: 200})
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
         }
     }
 }
