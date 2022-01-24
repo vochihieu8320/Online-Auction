@@ -11,6 +11,7 @@ router.get('/best-bider-bide', authenticationService.authentication, productCont
 router.get('/best-price', authenticationService.authentication, productController.best_price);
 router.get('/best-date-end', authenticationService.authentication, productController.betst_date_bide);
 router.get('/seller', authenticationService.authentication, productController.seller_products);
+router.get('/winner', authenticationService.authentication, productController.winner)
 router.post('/reject-bide', authenticationService.authentication, productController.reject_product)
 router.post('/related-product', authenticationService.authentication, productController.relatedProducts)
 router.get('/:productID/auction', authenticationService.authentication, productController.getAuctions)

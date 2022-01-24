@@ -309,5 +309,21 @@ class NewController {
             }
         });
     }
+    like(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const userID = req.params.userID;
+                const like = +req.body.like;
+                const user = yield user_model_1.default.findById(userID);
+                const rating = rating_service_1.default.rating(user.rating, like);
+                yield user.updateOne({ rating: JSON.stringify(rating) });
+                res.json({ status: 200 });
+            }
+            catch (error) {
+                console.log(error);
+                res.sendStatus(500);
+            }
+        });
+    }
 }
 exports.default = new NewController;

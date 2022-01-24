@@ -302,6 +302,22 @@ class NewController
             res.sendStatus(500)
         }
     }
+
+    async like(req: any, res: any)
+    {
+        try {
+            const userID = req.params.userID;
+            const like = +req.body.like;
+            const user = <any> await User.findById(userID);
+            const rating = RatingService.rating(user.rating, like);
+            await user.updateOne({rating: JSON.stringify(rating)});
+            res.json({status: 200})     
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
+        }
+       
+    }
 }
 
 export default new NewController;

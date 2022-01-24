@@ -21,4 +21,5 @@ router.patch('/bide', user_service_1.default.authentication, user_controller_1.d
 router.get('/:userID', user_service_1.default.authentication, user_controller_1.default.show);
 router.get('/:userID/bide/:productID', user_service_1.default.authentication, user_controller_1.default.current_bide);
 router.patch('/update_me/:userID', user_service_1.default.authentication, user_controller_1.default.update_me);
+router.post('/:userID/like', user_service_1.default.authentication, user_controller_1.default.like);
 exports.default = router;

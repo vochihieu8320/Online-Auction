@@ -13,6 +13,7 @@ const category_route_1 = __importDefault(require("./category.route"));
 const otp_route_1 = __importDefault(require("./otp.route"));
 const inbox_route_1 = __importDefault(require("./inbox.route"));
 const auction_history_route_1 = __importDefault(require("./auction_history.route"));
+const feeback_route_1 = __importDefault(require("./feeback.route"));
 function route(app) {
     app.use('/users', user_route_1.default);
     app.use('/auctions', aution_route_1.default);
@@ -24,5 +25,6 @@ function route(app) {
     app.use('/otp', otp_route_1.default);
     app.use('/inboxes', inbox_route_1.default);
     app.use('/auction-history', auction_history_route_1.default);
+    app.use('/feedbacks', feeback_route_1.default);
 }
 exports.default = route;

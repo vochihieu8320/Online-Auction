@@ -312,7 +312,6 @@ class ProductController{
             }
             //send mail for bider
             const user = <any> await User.findById(userID);
-            console.log("user", user);
             const product = <any> await Product.findById(productID);
             const form = {
                 name: user.name,
@@ -331,6 +330,54 @@ class ProductController{
             res.sendStatus(500);
         }
       
+    }
+
+    async winner(req: any, res: any)
+    {
+        const sellerID = req.query.sellerID;
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        try {
+            const result = await Product.aggregate([
+                { $addFields: { "productID": { $toString: "$_id" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "auctions",
+                        localField:"productID",
+                        foreignField: "productID",
+                        as: "auction"
+                    }
+                },
+                {$unwind: { path: "$auction", preserveNullAndEmptyArrays: true }},
+                { $addFields: { "holder": { $toObjectId: "$auction.holderID" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "users",
+                        localField:"holder",
+                        foreignField: "_id",
+                        as: "user"
+                    }
+                },
+                {
+                    $match: {seller: sellerID, "auction.status": 2} 
+                },
+                {
+                    $skip: +skip
+                },
+                {
+                    $limit: +limit
+                }
+            ])
+            const count = await Auction.count({status: 2})
+            res.json({data: result, count: count})
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
+        }
     }
 }
 

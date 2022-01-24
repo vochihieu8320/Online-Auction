@@ -61,7 +61,8 @@ const User = new mongoose.Schema(
         rating:
         {
             type: String,
-        }
+        },
+       
     },
     { timestamps: true}
 )

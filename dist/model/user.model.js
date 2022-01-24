@@ -54,7 +54,7 @@ const User = new mongoose_1.default.Schema({
     },
     rating: {
         type: String,
-    }
+    },
 }, { timestamps: true });
 User.index({ email: 1 });
 const model = mongoose_1.default.model('User', User);
