@@ -7,6 +7,7 @@ const router = express.Router();
 router.get('/', AuctionController.getAuctions)
 router.post('/', AuctionController.createAuctions )
 router.patch('/:auctionID', authenticationService.authentication, AuctionController.update)
-router.post('/test', AuctionController.auction_history)
+router.post('/test', AuctionController.auction_history);
+router.get('/user-winner', authenticationService.authentication, AuctionController.user_winners)
 
 export default router;

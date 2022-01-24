@@ -9,7 +9,8 @@ import otpRouter from './otp.route';
 import inboxRouter from './inbox.route';
 import auction_historyRouter from './auction_history.route';
 import feedback_router from './feeback.route';
-import loveList_router from './love_list.route'
+import loveList_router from './love_list.route';
+import productFeature from './product_feature.route';
 function route(app: any)
 {
     app.use('/users', userRouter);
@@ -23,7 +24,8 @@ function route(app: any)
     app.use('/inboxes', inboxRouter);
     app.use('/auction-history', auction_historyRouter);
     app.use('/feedbacks', feedback_router);
-    app.use('/lovelist', loveList_router)
+    app.use('/lovelist', loveList_router);
+    app.use('/features', productFeature)
 }
 
 export default route;

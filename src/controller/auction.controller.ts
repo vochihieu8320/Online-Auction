@@ -103,6 +103,56 @@ class AutionController {
             res.sendStatus(400)
         }
     }
+
+    async user_winners(req: any, res: any)
+    {
+        const userID = req.query.userID;
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        try {
+            const result = await Auction.aggregate([
+                {
+                    $match: {holderID: userID, status: 2}
+                },
+                { $addFields: { "product": { $toObjectId: "$productID" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "Product",
+                        localField:"product",
+                        foreignField: "_id",
+                        as: "productInfo"
+                    }
+                },
+                {$unwind: { path: "$productInfo", preserveNullAndEmptyArrays: true }},
+                { $addFields: { "sellerInfo": { $toObjectId: "$productInfo.seller" }}},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "users",
+                        localField:"sellerInfo",
+                        foreignField: "_id",
+                        as: "sellerDetail"
+                    }
+                },
+                {$unwind: { path: "$sellerDetail", preserveNullAndEmptyArrays: true }},
+                {
+                    $skip: +skip
+                },
+                {
+                    $limit: +limit
+                }       
+            ])
+        const count = await Auction.count({holderID: userID, status: 2})
+        res.json({data:result, count: count})
+
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)            
+        }
+    }
 }
 
 
