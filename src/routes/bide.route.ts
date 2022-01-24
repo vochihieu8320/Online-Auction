@@ -5,5 +5,6 @@ import authenticationService from '../service/authentication.service';
 const router = express.Router();
 
 router.post('/', authenticationService.authentication, BideController.addBide);
+router.get('/', authenticationService.authentication, BideController.index)
 
 export default router;
