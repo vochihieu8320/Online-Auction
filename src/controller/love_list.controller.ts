@@ -39,6 +39,18 @@ class LoveListController {
             res.sendStatus(500);
         }
     }
+
+    async destroy(req:any, res:any)
+    {
+        const id = req.params.id;
+        try {
+            await Love_list.findByIdAndDelete(id);
+            res.json({status: 200})
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500);
+        }
+    }
 }
 
 export default new LoveListController
