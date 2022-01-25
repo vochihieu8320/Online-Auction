@@ -49,6 +49,10 @@ var Product = new mongoose.Schema(
         sub_img:{
             type: String,
            
+        },
+        auto_add_end_at:
+        {
+            type: Number
         }
     },
     { timestamps: true,collection:'Product'}

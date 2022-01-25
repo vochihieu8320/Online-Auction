@@ -7,7 +7,7 @@ const drive = googleService.config()
 class UploadController{
 
     async upload(req: any, res: any){
-        if(req.file && req.productID)
+        if(req.file)
         {
             if(Validate.validateFile(req.file))
             {

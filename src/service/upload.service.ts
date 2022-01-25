@@ -18,7 +18,12 @@ class uploadService{
               fileId: fileId,
               fields: 'webViewLink',
             });
-            return result.data
+
+            const temp = result.data.webViewLink
+            const b = temp.split("https://drive.google.com/file/d/")
+            const c = b[1].split("/")
+            const url = `https://drive.google.com/uc?export=view&id=${c[0]}`
+            return url
           } catch (error) {
             console.log(error);
           }

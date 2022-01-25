@@ -16,11 +16,14 @@ class BideController{
                 await Bide.create(req.body);
             }
 
+            const check_action = <any> await Auction.findOne({productID: req.body.productID});
+
             const aucton = {
                 min_price: +req.body.current_price,
-                status: 1
+                status: 1,
+                amount_bider_bide: check_action.amount_bider_bide + 1
             }
-            await Auction.findOneAndUpdate({productID: req.body.productID}, aucton);  
+            await check_action.updateOne(aucton)
         
             const body = {
                 userID: req.body.userID,

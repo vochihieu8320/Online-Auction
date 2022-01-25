@@ -46,7 +46,6 @@ class CategoryController{
 
     async index(req: any, res: any){
         try {
-            const {skip, limit} = req.query;
             const data = await Category.aggregate([
                 {
                     $match: {parentID: null}
@@ -59,12 +58,6 @@ class CategoryController{
                         foreignField: "parentID",
                         as: "childs"
                     }
-                },
-                {
-                    $skip: +skip,
-                },
-                {
-                    $limit: +limit
                 },
                 {
                     $sort: {createdAt: -1}
