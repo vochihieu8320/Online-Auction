@@ -4,8 +4,8 @@ class ProductFeatureController {
     async create(req: any, res: any)
     {
         try {
-            await Product_feature.create(req.body);
-            res.json({status: 200})
+            const result = await Product_feature.create(req.body);
+            res.json(result);
         } catch (error) {
             console.log(error);
             res.sendStatus(500)

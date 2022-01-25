@@ -7,7 +7,6 @@ const Auction = new mongoose.Schema(
         holderID: 
         { 
             type: String,
-            required: true
         },
         productID: 
         { 
@@ -21,7 +20,7 @@ const Auction = new mongoose.Schema(
         },
         //số lượt bider ra giá
         amount_bider_bide:{
-            type: String,
+            type: Number,
         },
         status:{
             type: Number,
@@ -32,12 +31,6 @@ const Auction = new mongoose.Schema(
             type: String,
             required: true
         },
-        bide:{
-            type: String,
-            required: true
-        }
-        
-       
     },
     { timestamps: true}
 )

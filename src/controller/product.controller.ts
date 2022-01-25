@@ -85,7 +85,16 @@ class ProductController{
     {
        try{
            if(await ProductService.checkCategory(req.body.categoryID)){
-                const data = await Product.create(req.body)
+                const data = <any> await Product.create(req.body);
+                //add auction
+                const auction = {
+                    productID: data._id,
+                    min_price: req.body.min_price,
+                    real_price: req.body.real_price,
+                    amount_bider_bide: 0,
+                    status: 1
+                }
+                await Auction.create(auction);
                 res.json({status: 200, data: data})
            }
            else
@@ -94,6 +103,7 @@ class ProductController{
            }
           
        }catch(err){
+           console.log(err);
            res.sendStatus(400)
        }
 
@@ -379,6 +389,8 @@ class ProductController{
             res.sendStatus(500);
         }
     }
+
+   
 }
 
 export default new ProductController;
