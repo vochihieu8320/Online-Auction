@@ -24,7 +24,7 @@ class NewController
                 const hash_reqCode = await userService.hashpass(regCode);
                 //store hash_code in database
                 await User.findOneAndUpdate({ email: email}, {reset_digest: hash_reqCode})
-                const link = `${process.env.Domain_Fe}/forgot-pwd/${regCode}?email=${email}`;
+                const link = `${process.env.Domain_Fe}/auth/forgot-pwd/${regCode}?email=${email}`;
                 const form = {
                     name: user.name,
                     link: link
@@ -37,7 +37,7 @@ class NewController
                 const transporter = mail.connect()
                 //send mail
                 mailService.send_mail(transporter, mail_options)
-                res.sendStatus(200)
+                res.json({status: 200})
             }
             else
             {
@@ -133,7 +133,7 @@ class NewController
                 {
                     const hashed = await userService.hashpass(password);
                     await User.updateOne({email: email}, {reset_digest: "", password: hashed})
-                    res.sendStatus(200)
+                    res.json({status: 200})
                 }
                 else
                 {
@@ -147,6 +147,7 @@ class NewController
         }
         catch(err)
         {
+            res.sendStatus(500)
             console.log(err);
         }
     }

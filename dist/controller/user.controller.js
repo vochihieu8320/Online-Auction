@@ -33,7 +33,7 @@ class NewController {
                     const hash_reqCode = yield user_service_1.default.hashpass(regCode);
                     //store hash_code in database
                     yield user_model_1.default.findOneAndUpdate({ email: email }, { reset_digest: hash_reqCode });
-                    const link = `${process.env.Domain_Fe}/forgot-pwd/${regCode}?email=${email}`;
+                    const link = `${process.env.Domain_Fe}/auth/forgot-pwd/${regCode}?email=${email}`;
                     const form = {
                         name: user.name,
                         link: link
@@ -46,7 +46,7 @@ class NewController {
                     const transporter = mailer_1.default.connect();
                     //send mail
                     mail_service_1.default.send_mail(transporter, mail_options);
-                    res.sendStatus(200);
+                    res.json({ status: 200 });
                 }
                 else {
                     res.json({ status: 400, error: "Email not found" });
@@ -144,7 +144,7 @@ class NewController {
                     if (yield user_service_1.default.comparepass(regCode, user.reset_digest)) {
                         const hashed = yield user_service_1.default.hashpass(password);
                         yield user_model_1.default.updateOne({ email: email }, { reset_digest: "", password: hashed });
-                        res.sendStatus(200);
+                        res.json({ status: 200 });
                     }
                     else {
                         res.sendStatus(400);
@@ -155,6 +155,7 @@ class NewController {
                 }
             }
             catch (err) {
+                res.sendStatus(500);
                 console.log(err);
             }
         });

@@ -81,6 +81,7 @@ class InboxController{
                 const form = {
                     name: user.name,
                 }
+                await user.updateOne({user_type: "2"})
                 //create a template
                 const forgot_pwd_template = template.bider_seller(form)
                 //create option (sent to who ??)

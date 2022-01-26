@@ -7,6 +7,7 @@ import mailService from '../service/mail.service'
 import mail from "../mailer/mailer";
 import Product from "../model/product.model"
 import User from "../model/user.model"
+import Bide from '../model/bide.model'
 
 class AutionController {
     async getAuctions(req :any, res :any){
@@ -151,6 +152,18 @@ class AutionController {
         } catch (error) {
             console.log(error);
             res.sendStatus(500)            
+        }
+    }
+
+    async update_auction_when_reject(req :any, res :any)
+    {
+        try {
+            const auctionID = req.params.auctionID;
+            const auction = <any> await Auction.findByIdAndUpdate(auctionID, {status: 0});
+            res.json({status: 200})
+        } catch (error) {
+            console.log(error);
+            res.sendStatus(500)
         }
     }
 }
