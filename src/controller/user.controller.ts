@@ -57,7 +57,8 @@ class NewController
                 name: req.body.name,
                 email: req.body.email,
                 password: hashed,
-                user_type: req.body.user_type
+                user_type: req.body.user_type,
+                rating: "[1,1,1,1,1,1,1,1,1,1]"
             })
             const token = userService.JWT(user)
             const refreshToken = userService.refreshToken(user)

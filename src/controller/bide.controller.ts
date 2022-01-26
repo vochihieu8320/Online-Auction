@@ -56,9 +56,6 @@ class BideController{
             const skip = req.query.skip;
             const limit = req.query.limit;
             const result = await Bide.aggregate([
-                {
-                    $match: {userID: userID},
-                },
                 { $addFields: { "product": { $toObjectId: "$productID" }}},
                 {
                     $lookup:
@@ -71,6 +68,20 @@ class BideController{
                     }
                 },
                 {$unwind: { path: "$productInfo", preserveNullAndEmptyArrays: true }},
+                {
+                    $lookup:
+                    {
+                       
+                        from: "auctions",
+                        localField:"productID",
+                        foreignField: "productID",
+                        as: "auctionInfo"
+                    }
+                },
+                {$unwind: { path: "$auctionInfo", preserveNullAndEmptyArrays: true }},
+                {
+                    $match: {userID: userID, "auctionInfo.status": {$nin: [2]}},
+                },
                 {
                     $skip: +skip
                 },
