@@ -160,6 +160,7 @@ class AutionController {
         try {
             const auctionID = req.params.auctionID;
             const auction = <any> await Auction.findByIdAndUpdate(auctionID, {status: 0});
+            
             res.json({status: 200})
         } catch (error) {
             console.log(error);

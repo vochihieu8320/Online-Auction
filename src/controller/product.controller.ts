@@ -318,7 +318,7 @@ class ProductController{
             else
             {
                 const auction = <any >await Auction.findOne({productID: productID});
-                await auction.update({min_price: auction.real_price})
+                await auction.updateOne({min_price: auction.real_price})
             }
             //send mail for bider
             const user = <any> await User.findById(userID);
