@@ -9,7 +9,7 @@ const app = express();
 app.use(
     cors(
         {
-            origin: process.env.Domain_Fe
+            origin: [process.env.Domain_Fe, "https://wnc-fe-admin.herokuapp.com"]
         }
     )
 )

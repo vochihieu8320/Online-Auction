@@ -46,7 +46,7 @@ class CategoryController{
 
     async index(req: any, res: any){
         try {
-            const data = await Category.aggregate([
+            const result = await Category.aggregate([
                 {
                     $match: {parentID: null}
                 },
@@ -62,8 +62,9 @@ class CategoryController{
                 {
                     $sort: {createdAt: -1}
                 }
-            ])     
-            res.json(data)
+            ]) 
+            const count = await Category.count({parentID: null})    
+            res.json({data: result, count: count})
         } catch (error) {
             console.log(error);
             res.sendStatus(500)

@@ -9,7 +9,7 @@ const index_1 = __importDefault(require("./routes/index"));
 const cors = require("cors");
 const app = express();
 app.use(cors({
-    origin: process.env.Domain_Fe
+    origin: [process.env.Domain_Fe, "https://wnc-fe-admin.herokuapp.com"]
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

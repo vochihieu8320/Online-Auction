@@ -15,6 +15,7 @@ module.exports = {
       google_redirect_uri: "https://developers.google.com/oauthplayground/"
     },
     env_production: {
+      Domain_Fe: "http://localhost:4200",
       NODE_ENV: "production",
       JWT_TOKEN_SECRET: "vch@11111111iiiiiiiii",
       db : "mongodb+srv://appchat:zK26s3auQa52Ux1I@cluster0.aw7bq.mongodb.net/AppChat?retryWrites=true&w=majority",
